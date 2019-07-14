@@ -1,23 +1,31 @@
-import Typography from "typography"
-import Wordpress2016 from "typography-theme-wordpress-2016"
+import Typography from 'typography';
 
-Wordpress2016.overrideThemeStyles = () => {
-  return {
-    "a.gatsby-resp-image-link": {
-      boxShadow: `none`,
-    },
-  }
-}
-
-delete Wordpress2016.googleFonts
-
-const typography = new Typography(Wordpress2016)
+const typography = new Typography({
+	title: 'typography-theme-div-blog',
+	headerFontFamily: ['Zilla Slab', 'Helvetica', 'sans-serif'],
+	bodyFontFamily: ['Open Sans', 'sans-serif'],
+	baseLineHeight: 1.65,
+	scaleRatio: 3.5,
+	headerWeight: 500,
+	baseFontSize: 18,
+	overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
+		blockquote: {
+			...adjustFontSizeTo('22px'),
+			color: 'hsl(0,0%,0%,0.75)',
+			fontFamily: ['Zilla Slab', 'Helvetica', 'sans-serif'].join(),
+			fontStyle: 'italic',
+			paddingLeft: rhythm(13 / 16),
+			marginLeft: rhythm(-1),
+			borderLeft: `${rhythm(2.5 / 16)} solid hsl(0,0%,0%,0.75)`,
+		},
+	}),
+});
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
-  typography.injectStyles()
+	typography.injectStyles();
 }
 
-export default typography
-export const rhythm = typography.rhythm
-export const scale = typography.scale
+export default typography;
+export const rhythm = typography.rhythm;
+export const scale = typography.scale;

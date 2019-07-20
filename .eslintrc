@@ -1,0 +1,11 @@
+{
+	"extends": ["airbnb", "prettier", "prettier/react"],
+	"plugins": ["prettier"],
+	"rules": {
+		"prettier/prettier": "error",
+		"react/forbid-prop-types": 0
+	},
+	"globals": {
+		"__PATH_PREFIX__": false
+	}
+}

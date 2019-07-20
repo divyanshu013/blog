@@ -1,18 +1,30 @@
 import Typography from 'typography';
 
+const SYSTEM_FONT_STACK = [
+	'-apple-system',
+	'BlinkMacSystemFont',
+	'Segoe UI',
+	'Roboto',
+	'Oxygen-Sans',
+	'Ubuntu',
+	'Cantarell',
+	'Helvetica Neue',
+	'sans-serif',
+];
+
 const typography = new Typography({
 	title: 'typography-theme-div-blog',
-	headerFontFamily: ['Zilla Slab', 'Helvetica', 'sans-serif'],
-	bodyFontFamily: ['Open Sans', 'sans-serif'],
+	headerFontFamily: ['Zilla Slab', ...SYSTEM_FONT_STACK],
+	bodyFontFamily: ['Open Sans', ...SYSTEM_FONT_STACK],
 	baseLineHeight: 1.65,
 	scaleRatio: 3.5,
 	headerWeight: 500,
 	baseFontSize: 18,
-	overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
+	overrideStyles: ({ adjustFontSizeTo, rhythm }) => ({
 		blockquote: {
 			...adjustFontSizeTo('22px'),
 			color: 'hsl(0,0%,0%,0.75)',
-			fontFamily: ['Zilla Slab', 'Helvetica', 'sans-serif'].join(),
+			fontFamily: ['Zilla Slab', ...SYSTEM_FONT_STACK].join(),
 			fontStyle: 'italic',
 			paddingLeft: rhythm(13 / 16),
 			marginLeft: rhythm(-1),
@@ -27,5 +39,5 @@ if (process.env.NODE_ENV !== `production`) {
 }
 
 export default typography;
-export const rhythm = typography.rhythm;
-export const scale = typography.scale;
+
+export const { rhythm, scale } = typography;

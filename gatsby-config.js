@@ -1,15 +1,22 @@
 module.exports = {
 	siteMetadata: {
-		title: `Div`,
+		bio: 'Life, music, code and things in between…',
+		title: `Div’s Blog`,
 		author: `Divyanshu Maithani`,
 		description: `Personal blog of Divyanshu Maithani`,
 		siteUrl: `https://divyanshu013.dev`,
 		social: {
-			twitter: `divyanshu013`,
-			github: 'divyanshu013',
+			twitter: `https://twitter.com/divyanshu013`,
+			github: 'https://github.com/divyanshu013',
+			youtube: 'https://youtube.com/WhatTheJavaScript',
+			soundcloud: 'https://soundcloud.com/divyanshu-maithani',
+			instagram: 'https://instagram.com/divyanshu013',
+			email: 'mailto:div.blackcat@gmail.com',
+			stackoverflow: 'https://stackoverflow.com/users/4952669/divyanshu-maithani',
 		},
 	},
 	plugins: [
+		`gatsby-plugin-emotion`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -51,7 +58,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-google-analytics`,
 			options: {
-				//trackingId: `ADD YOUR TRACKING ID HERE`,
+				// trackingId: `ADD YOUR TRACKING ID HERE`,
 			},
 		},
 		`gatsby-plugin-feed`,

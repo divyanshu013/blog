@@ -43,9 +43,11 @@ const Sidebar = () => {
 		<nav
 			css={{
 				// boxShadow: '0 7px 30px -10px rgba(150,170,180,0.5)',
-				borderRight: '1px solid hsl(0, 0%, 0%, 0.1)',
+				borderRight: '1px solid',
 				margin: '24px 0',
 				padding: '16px 64px',
+				alignSelf: 'start',
+				borderImage: 'linear-gradient(to bottom, hsla(0, 0%, 0%, 0.1), hsla(0, 0%, 0%, 0)) 1 100%',
 			}}
 		>
 			<Image

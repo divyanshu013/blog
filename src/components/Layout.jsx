@@ -8,18 +8,7 @@ const Layout = ({ location, title, children }) => {
 	const rootPath = `${__PATH_PREFIX__}/`;
 	let header;
 
-	if (location.pathname === rootPath) {
-		header = (
-			<h3
-				style={{
-					marginBottom: rhythm(1.5),
-					marginTop: 0,
-				}}
-			>
-				Recent posts
-			</h3>
-		);
-	} else {
+	if (location.pathname !== rootPath) {
 		header = (
 			<h2
 				style={{
@@ -50,9 +39,6 @@ const Layout = ({ location, title, children }) => {
 		>
 			<header>{header}</header>
 			<main>{children}</main>
-			<footer style={{ fontStyle: 'italic' }}>
-				Follow me on <a href="https://twitter.com/divyanshu013">twitter</a> for updates
-			</footer>
 		</div>
 	);
 };

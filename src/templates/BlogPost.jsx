@@ -42,6 +42,8 @@ const BlogPost = ({ data, pageContext, location }) => {
 			/>
 			<hr
 				style={{
+					borderBottom: '1px solid #eee',
+					height: 0,
 					marginBottom: rhythm(1),
 				}}
 			/>

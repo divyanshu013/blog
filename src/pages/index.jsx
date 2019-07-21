@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { object } from 'prop-types';
+import { mediaMax } from '@divyanshu013/media';
 
 import Sidebar from '../components/Sidebar';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import { rhythm } from '../utils/typography';
+import { CUBIC_BEZIER_TRANSITION } from '../utils/theme';
 
 const BlogIndex = ({ data, location }) => {
 	const siteTitle = data.site.siteMetadata.title;
@@ -16,10 +18,16 @@ const BlogIndex = ({ data, location }) => {
 			css={{
 				display: 'grid',
 				gridTemplateColumns: 'auto 1fr',
+				alignContent: 'start',
 				height: '100%',
 				minHeight: '100vh',
 				maxWidth: 1200,
 				margin: '0 auto',
+				transition: CUBIC_BEZIER_TRANSITION,
+				[mediaMax.large]: {
+					gridTemplateColumns: 'auto',
+					justifyItems: 'center',
+				},
 			}}
 		>
 			<Sidebar />

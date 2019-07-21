@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 import { FiTwitter, FiGithub, FiInstagram, FiYoutube, FiMail } from 'react-icons/fi';
 import { FaSoundcloud, FaStackOverflow } from 'react-icons/fa';
+import { mediaMax } from '@divyanshu013/media';
 
 import Button from './Button';
 import { rhythm } from '../utils/typography';
@@ -42,21 +43,46 @@ const Sidebar = () => {
 	return (
 		<nav
 			css={{
-				// boxShadow: '0 7px 30px -10px rgba(150,170,180,0.5)',
 				borderRight: '1px solid',
 				margin: '24px 0',
 				padding: '16px 64px',
 				alignSelf: 'start',
 				borderImage: 'linear-gradient(to bottom, hsla(0, 0%, 0%, 0.1), hsla(0, 0%, 0%, 0)) 1 100%',
+				[mediaMax.large]: {
+					borderBottom: '1px solid',
+					borderImage: 'linear-gradient(to right, hsla(0, 0%, 0%, 0.1), hsla(0, 0%, 0%, 0)) 1 100%',
+					borderImageSlice: 1,
+					padding: `16px 0 ${rhythm(2)} 0`,
+					margin: '24px 32px',
+				},
 			}}
 		>
-			<Image
-				alt={author}
-				fixed={avatar.childImageSharp.fixed}
-				imgStyle={{ borderRadius: '50%' }}
-				css={{ marginBottom: rhythm(0.8) }}
-			/>
-			<h3>{author}</h3>
+			<div
+				css={{
+					[mediaMax.small]: {
+						display: 'grid',
+						gridTemplateColumns: 'auto auto',
+						gridGap: 16,
+						alignItems: 'center',
+						justifyContent: 'start',
+					},
+				}}
+			>
+				<Image
+					alt={author}
+					fixed={avatar.childImageSharp.fixed}
+					imgStyle={{ borderRadius: '50%' }}
+					css={{
+						marginBottom: rhythm(0.8),
+						[mediaMax.small]: {
+							width: '64px !important',
+							height: '64px !important',
+							order: 1,
+						},
+					}}
+				/>
+				<h3>{author}</h3>
+			</div>
 			<p css={{ color: TEXT_MUTED }}>{bio}</p>
 			<div
 				css={{

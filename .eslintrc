@@ -3,7 +3,8 @@
 	"plugins": ["prettier"],
 	"rules": {
 		"prettier/prettier": "error",
-		"react/forbid-prop-types": 0
+		"react/forbid-prop-types": 0,
+		"react/no-array-index-key": 0
 	},
 	"globals": {
 		"__PATH_PREFIX__": false

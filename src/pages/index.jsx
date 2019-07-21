@@ -6,11 +6,11 @@ import { mediaMax } from '@divyanshu013/media';
 import Sidebar from '../components/Sidebar';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
+import BlogInfo from '../components/BlogInfo';
 import { rhythm } from '../utils/typography';
 import { CUBIC_BEZIER_TRANSITION } from '../utils/theme';
 
 const BlogIndex = ({ data, location }) => {
-	const siteTitle = data.site.siteMetadata.title;
 	const posts = data.allMarkdownRemark.edges;
 
 	return (
@@ -31,22 +31,22 @@ const BlogIndex = ({ data, location }) => {
 			}}
 		>
 			<Sidebar />
-			<Layout location={location} title={siteTitle}>
+			<Layout location={location}>
 				<Seo title="Home" />
 				{posts.map(({ node }) => {
 					const title = node.frontmatter.title || node.fields.slug;
 					return (
 						<div key={node.fields.slug}>
+							<BlogInfo timeToRead={node.timeToRead} date={node.frontmatter.date} />
 							<h3
-								style={{
-									marginBottom: rhythm(1 / 4),
+								css={{
+									marginTop: rhythm(1 / 4),
 								}}
 							>
 								<Link style={{ boxShadow: `none` }} to={node.fields.slug}>
 									{title}
 								</Link>
 							</h3>
-							<small>{node.frontmatter.date}</small>
 							<p
 								dangerouslySetInnerHTML={{
 									__html: node.frontmatter.description || node.excerpt,
@@ -67,11 +67,6 @@ BlogIndex.propTypes = {
 
 export const pageQuery = graphql`
 	query {
-		site {
-			siteMetadata {
-				title
-			}
-		}
 		allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
 			edges {
 				node {
@@ -84,6 +79,7 @@ export const pageQuery = graphql`
 						title
 						description
 					}
+					timeToRead
 				}
 			}
 		}

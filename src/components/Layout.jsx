@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { node, object, string } from 'prop-types';
+import { node, object } from 'prop-types';
 import { mediaMax } from '@divyanshu013/media';
+import { FiTerminal } from 'react-icons/fi';
 
 import { rhythm } from '../utils/typography';
 import { EASE_IN_OUT_TRANSITION, TEXT_PRIMARY } from '../utils/theme';
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, children }) => {
 	const rootPath = `${__PATH_PREFIX__}/`;
 	let header;
 
@@ -22,10 +23,12 @@ const Layout = ({ location, title, children }) => {
 						boxShadow: `none`,
 						textDecoration: `none`,
 						color: `inherit`,
+						display: 'inline-flex',
+						alignItems: 'flex-end',
 					}}
 					to="/"
 				>
-					{title}
+					<FiTerminal css={{ marginRight: 8 }} /> Div’s Blog
 				</Link>
 			</h2>
 		);
@@ -60,7 +63,6 @@ const Layout = ({ location, title, children }) => {
 
 Layout.propTypes = {
 	location: object.isRequired,
-	title: string.isRequired,
 	children: node.isRequired,
 };
 

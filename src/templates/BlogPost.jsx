@@ -5,7 +5,9 @@ import { object } from 'prop-types';
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
-import { rhythm, scale } from '../utils/typography';
+import BlogInfo from '../components/BlogInfo';
+import { rhythm } from '../utils/typography';
+import { TEXT_PRIMARY, COLOR_PRIMARY } from '../utils/theme';
 
 const BlogPost = ({ data, pageContext, location }) => {
 	const post = data.markdownRemark;
@@ -18,24 +20,26 @@ const BlogPost = ({ data, pageContext, location }) => {
 				title={post.frontmatter.title}
 				description={post.frontmatter.description || post.excerpt}
 			/>
+			<BlogInfo date={post.frontmatter.date} timeToRead={post.timeToRead} />
 			<h1
 				style={{
-					marginTop: rhythm(1),
-					marginBottom: 0,
+					marginTop: rhythm(1 / 4),
+					marginBottom: rhythm(1),
 				}}
 			>
 				{post.frontmatter.title}
 			</h1>
-			<p
-				style={{
-					...scale(-1 / 5),
-					display: `block`,
-					marginBottom: rhythm(1),
+			<div
+				css={{
+					a: {
+						borderBottomColor: TEXT_PRIMARY,
+						'&:hover, &:focus': {
+							borderBottomStyle: 'solid',
+						},
+					},
 				}}
-			>
-				{post.frontmatter.date}
-			</p>
-			<div dangerouslySetInnerHTML={{ __html: post.html }} />
+				dangerouslySetInnerHTML={{ __html: post.html }}
+			/>
 			<hr
 				style={{
 					marginBottom: rhythm(1),
@@ -94,6 +98,7 @@ export const pageQuery = graphql`
 				date(formatString: "MMMM DD, YYYY")
 				description
 			}
+			timeToRead
 		}
 	}
 `;

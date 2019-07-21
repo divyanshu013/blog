@@ -83,6 +83,12 @@ module.exports = {
 			},
 		},
 		{
+			resolve: `gatsby-plugin-nprogress`,
+			options: {
+				color: `salmon`,
+			},
+		},
+		{
 			resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
 			options: {
 				devMode: false,

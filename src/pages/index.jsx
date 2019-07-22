@@ -44,7 +44,7 @@ const BlogIndex = ({ data, location }) => {
 						<FiTerminal />
 						It’s empty here but not for long
 					</article>
-					{posts.map(({ node }) => {
+					{/* {posts.map(({ node }) => {
 						const title = node.frontmatter.title || node.fields.slug;
 						return (
 							<div key={node.fields.slug}>
@@ -65,7 +65,7 @@ const BlogIndex = ({ data, location }) => {
 								/>
 							</div>
 						);
-					})}
+					})} */}
 				</Layout>
 			</section>
 		</ThemeProvider>

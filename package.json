@@ -12,6 +12,7 @@
 		"@divyanshu013/media": "^1.0.0",
 		"@emotion/core": "^10.0.14",
 		"@emotion/styled": "^10.0.14",
+		"emotion-theming": "^10.0.14",
 		"gatsby": "^2.13.18",
 		"gatsby-image": "^2.2.6",
 		"gatsby-plugin-emotion": "^4.1.2",

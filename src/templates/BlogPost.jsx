@@ -7,7 +7,9 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import BlogInfo from '../components/BlogInfo';
 import { rhythm } from '../utils/typography';
-import { TEXT_PRIMARY, COLOR_PRIMARY } from '../utils/theme';
+import ThemeProvider from '../components/ThemeProvider';
+import ThemeContext from '../components/ThemeContext';
+import { getTheme } from '../utils/theme';
 
 const BlogPost = ({ data, pageContext, location }) => {
 	const post = data.markdownRemark;
@@ -15,65 +17,72 @@ const BlogPost = ({ data, pageContext, location }) => {
 	const { previous, next } = pageContext;
 
 	return (
-		<Layout location={location} title={siteTitle}>
-			<Seo
-				title={post.frontmatter.title}
-				description={post.frontmatter.description || post.excerpt}
-			/>
-			<BlogInfo date={post.frontmatter.date} timeToRead={post.timeToRead} />
-			<h1
-				style={{
-					marginTop: rhythm(1 / 4),
-					marginBottom: rhythm(1),
-				}}
-			>
-				{post.frontmatter.title}
-			</h1>
-			<div
-				css={{
-					a: {
-						borderBottomColor: TEXT_PRIMARY,
-						'&:hover, &:focus': {
-							borderBottomStyle: 'solid',
-						},
-					},
-				}}
-				dangerouslySetInnerHTML={{ __html: post.html }}
-			/>
-			<hr
-				style={{
-					borderBottom: '1px solid #eee',
-					height: 0,
-					marginBottom: rhythm(1),
-				}}
-			/>
-			<Bio />
+		<ThemeProvider>
+			<ThemeContext.Consumer>
+				{({ theme }) => (
+					<Layout location={location} title={siteTitle}>
+						<Seo
+							title={post.frontmatter.title}
+							description={post.frontmatter.description || post.excerpt}
+						/>
+						<BlogInfo date={post.frontmatter.date} timeToRead={post.timeToRead} />
+						<h1
+							style={{
+								marginTop: rhythm(1 / 4),
+								marginBottom: rhythm(1),
+							}}
+						>
+							{post.frontmatter.title}
+						</h1>
+						<div
+							css={{
+								a: {
+									borderBottomColor: getTheme(theme).color,
+									'&:hover, &:focus': {
+										borderBottomStyle: 'solid',
+										borderBottomColor: getTheme(theme).color,
+									},
+								},
+							}}
+							dangerouslySetInnerHTML={{ __html: post.html }}
+						/>
+						<hr
+							style={{
+								borderBottom: `1px solid ${getTheme(theme).borderColor}`,
+								height: 0,
+								marginBottom: rhythm(1),
+							}}
+						/>
+						<Bio />
 
-			<ul
-				style={{
-					display: `flex`,
-					flexWrap: `wrap`,
-					justifyContent: `space-between`,
-					listStyle: `none`,
-					padding: 0,
-				}}
-			>
-				<li>
-					{previous && (
-						<Link to={previous.fields.slug} rel="prev">
-							← {previous.frontmatter.title}
-						</Link>
-					)}
-				</li>
-				<li>
-					{next && (
-						<Link to={next.fields.slug} rel="next">
-							{next.frontmatter.title} →
-						</Link>
-					)}
-				</li>
-			</ul>
-		</Layout>
+						<ul
+							style={{
+								display: `flex`,
+								flexWrap: `wrap`,
+								justifyContent: `space-between`,
+								listStyle: `none`,
+								padding: 0,
+							}}
+						>
+							<li>
+								{previous && (
+									<Link to={previous.fields.slug} rel="prev">
+										← {previous.frontmatter.title}
+									</Link>
+								)}
+							</li>
+							<li>
+								{next && (
+									<Link to={next.fields.slug} rel="next">
+										{next.frontmatter.title} →
+									</Link>
+								)}
+							</li>
+						</ul>
+					</Layout>
+				)}
+			</ThemeContext.Consumer>
+		</ThemeProvider>
 	);
 };
 

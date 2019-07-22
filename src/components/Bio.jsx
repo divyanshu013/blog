@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 import { mediaMax } from '@divyanshu013/media';
 import { rhythm } from '../utils/typography';
-import { TEXT_PRIMARY } from '../utils/theme';
+import { getTheme } from '../utils/theme';
+import ThemeContext from './ThemeContext';
 
 const Bio = () => {
 	const data = useStaticQuery(graphql`
@@ -30,6 +31,8 @@ const Bio = () => {
 	`);
 
 	const { author, social } = data.site.siteMetadata;
+	const { theme } = useContext(ThemeContext);
+	const { color } = getTheme(theme);
 	return (
 		<div
 			css={{
@@ -37,9 +40,10 @@ const Bio = () => {
 				gridTemplateColumns: 'auto auto',
 				alignItems: 'start',
 				a: {
-					borderBottomColor: TEXT_PRIMARY,
+					borderBottomColor: color,
 					'&:hover, &:focus': {
 						borderBottomStyle: 'solid',
+						borderBottomColor: color,
 					},
 				},
 				[mediaMax.small]: {
@@ -54,6 +58,7 @@ const Bio = () => {
 					marginTop: 8,
 					marginRight: rhythm(1),
 					borderRadius: `100%`,
+					opacity: 0.87,
 					[mediaMax.small]: {
 						marginBottom: 8,
 					},

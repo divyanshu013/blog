@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { number, string } from 'prop-types';
 import { FiCoffee } from 'react-icons/fi';
 
-import { TEXT_MUTED } from '../utils/theme';
+import { getTheme } from '../utils/theme';
+import ThemeContext from './ThemeContext';
 
-const BlogInfo = ({ timeToRead, date }) => (
-	<div css={{ display: 'flex', alignItems: 'center', color: TEXT_MUTED }}>
-		<small css={{ marginRight: 4 }}>
-			{date} • {timeToRead} min read
-		</small>
-		{Array.from({ length: timeToRead / 7 + 1 }).map((item, index) => (
-			<FiCoffee key={index} />
-		))}
-	</div>
-);
+const BlogInfo = ({ timeToRead, date }) => {
+	const { theme } = useContext(ThemeContext);
+	const { muted } = getTheme(theme);
+	return (
+		<div css={{ display: 'flex', alignItems: 'center', color: muted }}>
+			<small css={{ marginRight: 4 }}>
+				{date} • {timeToRead} min read
+			</small>
+			{Array.from({ length: timeToRead / 7 + 1 }).map((item, index) => (
+				<FiCoffee key={index} />
+			))}
+		</div>
+	);
+};
 
 BlogInfo.propTypes = {
 	timeToRead: number.isRequired,

@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { node, object } from 'prop-types';
 import { mediaMax } from '@divyanshu013/media';
-import { FiTerminal } from 'react-icons/fi';
+import { FiTerminal, FiSun, FiMoon } from 'react-icons/fi';
 
+import ThemeContext from './ThemeContext';
+import Button from './Button';
 import { rhythm } from '../utils/typography';
 import { EASE_IN_OUT_TRANSITION, TEXT_PRIMARY } from '../utils/theme';
 
 const Layout = ({ location, children }) => {
 	const rootPath = `${__PATH_PREFIX__}/`;
 	let header;
+	const { theme, toggleTheme } = useContext(ThemeContext);
 
 	if (location.pathname !== rootPath) {
 		header = (
@@ -55,7 +58,19 @@ const Layout = ({ location, children }) => {
 				},
 			}}
 		>
-			<header>{header}</header>
+			<header
+				css={{
+					display: 'flex',
+					flexDirection: location.pathname === rootPath ? 'row-reverse' : 'row',
+					alignItems: 'center',
+					justifyContent: 'space-between',
+				}}
+			>
+				{header}
+				<Button circular onClick={toggleTheme}>
+					{theme === 'light' ? <FiSun /> : <FiMoon />}
+				</Button>
+			</header>
 			<main>{children}</main>
 		</div>
 	);

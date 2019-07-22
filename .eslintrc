@@ -8,5 +8,8 @@
 	},
 	"globals": {
 		"__PATH_PREFIX__": false
+	},
+	"env": {
+		"browser": true
 	}
 }

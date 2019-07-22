@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 import { FiTwitter, FiGithub, FiInstagram, FiYoutube, FiMail } from 'react-icons/fi';
@@ -7,7 +7,8 @@ import { mediaMax } from '@divyanshu013/media';
 
 import Button from './Button';
 import { rhythm } from '../utils/typography';
-import { TEXT_MUTED } from '../utils/theme';
+import { getTheme } from '../utils/theme';
+import ThemeContext from './ThemeContext';
 
 const SIDEBAR_QUERY = graphql`
 	{
@@ -40,6 +41,9 @@ const Sidebar = () => {
 	const data = useStaticQuery(SIDEBAR_QUERY);
 	const { avatar } = data;
 	const { author, bio, social } = data.site.siteMetadata;
+	const { theme } = useContext(ThemeContext);
+	const { muted } = getTheme(theme);
+	const borderStartingColor = theme === 'light' ? 'hsla(0, 0%, 0%, 0.1)' : 'hsla(0, 0%, 100%, 0.1)';
 	return (
 		<nav
 			css={{
@@ -47,10 +51,10 @@ const Sidebar = () => {
 				margin: '24px 0',
 				padding: '16px 64px',
 				alignSelf: 'start',
-				borderImage: 'linear-gradient(to bottom, hsla(0, 0%, 0%, 0.1), hsla(0, 0%, 0%, 0)) 1 100%',
+				borderImage: `linear-gradient(to bottom, ${borderStartingColor}, hsla(0, 0%, 0%, 0)) 1 100%`,
 				[mediaMax.large]: {
 					borderBottom: '1px solid',
-					borderImage: 'linear-gradient(to right, hsla(0, 0%, 0%, 0.1), hsla(0, 0%, 0%, 0)) 1 100%',
+					borderImage: `linear-gradient(to right, ${borderStartingColor}, hsla(0, 0%, 0%, 0)) 1 100%`,
 					borderImageSlice: 1,
 					padding: `16px 0 ${rhythm(2)} 0`,
 					margin: '24px 32px',
@@ -74,6 +78,7 @@ const Sidebar = () => {
 					imgStyle={{ borderRadius: '50%' }}
 					css={{
 						marginBottom: rhythm(0.8),
+						opacity: 0.87,
 						[mediaMax.small]: {
 							width: '64px !important',
 							height: '64px !important',
@@ -83,7 +88,7 @@ const Sidebar = () => {
 				/>
 				<h3>{author}</h3>
 			</div>
-			<p css={{ color: TEXT_MUTED }}>{bio}</p>
+			<p css={{ color: muted }}>{bio}</p>
 			<div
 				css={{
 					display: 'grid',

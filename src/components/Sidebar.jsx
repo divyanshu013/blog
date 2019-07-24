@@ -88,7 +88,9 @@ const Sidebar = () => {
 				/>
 				<h3>{author}</h3>
 			</div>
-			<p css={{ color: muted }}>{bio}</p>
+			<p className="muted" css={{ color: muted }}>
+				{bio}
+			</p>
 			<div
 				css={{
 					display: 'grid',

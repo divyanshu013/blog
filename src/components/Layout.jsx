@@ -7,12 +7,14 @@ import { FiTerminal, FiSun, FiMoon } from 'react-icons/fi';
 import ThemeContext from './ThemeContext';
 import Button from './Button';
 import { rhythm } from '../utils/typography';
-import { EASE_IN_OUT_TRANSITION, TEXT_PRIMARY } from '../utils/theme';
+import { EASE_IN_OUT_TRANSITION, TEXT_PRIMARY, getTheme } from '../utils/theme';
 
 const Layout = ({ location, children }) => {
 	const rootPath = `${__PATH_PREFIX__}/`;
 	let header;
 	const { theme, toggleTheme } = useContext(ThemeContext);
+	const { background } = getTheme(theme);
+	const darkTheme = getTheme('dark');
 
 	if (location.pathname !== rootPath) {
 		header = (
@@ -67,8 +69,33 @@ const Layout = ({ location, children }) => {
 				}}
 			>
 				{header}
-				<Button circular onClick={toggleTheme}>
+				<Button
+					circular
+					onClick={toggleTheme}
+					css={{
+						background,
+						transitionDuration: '0s',
+						// delay background-color transition for nicer animation
+						transitionDelay: theme === 'dark' ? '0s' : '0.75s',
+						transitionProperty: 'background-color',
+					}}
+				>
 					{theme === 'light' ? <FiSun /> : <FiMoon />}
+					<div
+						className={theme}
+						css={{
+							position: 'fixed',
+							background: darkTheme.background,
+							borderRadius: '50%',
+							width: 32,
+							height: 32,
+							zIndex: -1,
+							transition: 'transform 0.75s ease',
+							'&.dark': {
+								transform: 'scale(200)',
+							},
+						}}
+					/>
 				</Button>
 			</header>
 			<main>{children}</main>

@@ -9,7 +9,7 @@ const BlogInfo = ({ timeToRead, date }) => {
 	const { theme } = useContext(ThemeContext);
 	const { muted } = getTheme(theme);
 	return (
-		<div css={{ display: 'flex', alignItems: 'center', color: muted }}>
+		<div className="muted" css={{ display: 'flex', alignItems: 'center', color: muted }}>
 			<small css={{ marginRight: 4 }}>
 				{date} • {timeToRead} min read
 			</small>

@@ -72,6 +72,7 @@ const Layout = ({ location, children }) => {
 				<Button
 					circular
 					onClick={toggleTheme}
+					className="container"
 					css={{
 						background,
 						transitionDuration: '0s',

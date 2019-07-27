@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { object } from 'prop-types';
 import { mediaMax } from '@divyanshu013/media';
-import { FiTerminal } from 'react-icons/fi';
 
 import ThemeProvider from '../components/ThemeProvider';
 import Sidebar from '../components/Sidebar';
@@ -34,17 +33,7 @@ const BlogIndex = ({ data, location }) => {
 				<Sidebar />
 				<Layout location={location}>
 					<Seo title="Home" />
-					<article
-						css={{
-							display: 'grid',
-							gridGap: 16,
-							alignItems: 'center',
-						}}
-					>
-						<FiTerminal />
-						It’s empty here but not for long
-					</article>
-					{/* {posts.map(({ node }) => {
+					{posts.map(({ node }) => {
 						const title = node.frontmatter.title || node.fields.slug;
 						return (
 							<div key={node.fields.slug}>
@@ -65,7 +54,7 @@ const BlogIndex = ({ data, location }) => {
 								/>
 							</div>
 						);
-					})} */}
+					})}
 				</Layout>
 			</section>
 		</ThemeProvider>

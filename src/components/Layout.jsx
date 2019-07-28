@@ -78,7 +78,7 @@ const Layout = ({ location, children }) => {
 						transitionDuration: '0s',
 						// delay background-color transition for nicer animation
 						transitionDelay: theme === 'dark' ? '0s' : '0.75s',
-						transitionProperty: 'background-color',
+						transitionProperty: 'background-color, color',
 					}}
 				>
 					{theme === 'light' ? <FiSun /> : <FiMoon />}

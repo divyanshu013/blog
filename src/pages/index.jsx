@@ -32,7 +32,7 @@ const BlogIndex = ({ data, location }) => {
 			>
 				<Sidebar />
 				<Layout location={location}>
-					<Seo title="Home" />
+					<Seo />
 					{posts.map(({ node }) => {
 						const title = node.frontmatter.title || node.fields.slug;
 						return (

@@ -4,7 +4,12 @@ import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
 import { Global, css } from '@emotion/core';
 
 import ThemeContext from './ThemeContext';
-import { useTheme, getTheme, CUBIC_BEZIER_TRANSITION } from '../utils/theme';
+import {
+	useTheme,
+	getTheme,
+	CUBIC_BEZIER_TRANSITION,
+	BACKGROUND_TRANSITION_TIME,
+} from '../utils/theme';
 
 const ThemeProvider = ({ children }) => {
 	const [theme, toggleTheme] = useTheme();
@@ -21,6 +26,15 @@ const ThemeProvider = ({ children }) => {
 			<EmotionThemeProvider theme={currentTheme}>
 				<Global
 					styles={css({
+						html: {
+							scrollbarColor:
+								theme === 'dark' ? `${darkTheme.muted} ${darkTheme.background}` : 'auto',
+						},
+						body: {
+							// for rubber band effect in Chrome on MacOS and outside the scaled div with background color
+							backgroundColor: currentTheme.background,
+							transitionDelay: theme === 'dark' ? BACKGROUND_TRANSITION_TIME : '0s',
+						},
 						'body.dark': {
 							'.container': {
 								background: darkTheme.background,
@@ -38,6 +52,8 @@ const ThemeProvider = ({ children }) => {
 						color,
 						transition: CUBIC_BEZIER_TRANSITION,
 						zIndex: 1,
+						position: 'relative',
+						overflow: 'hidden',
 					}}
 					key={key}
 				>

@@ -7,13 +7,13 @@ import { FiTerminal, FiSun, FiMoon } from 'react-icons/fi';
 import ThemeContext from './ThemeContext';
 import Button from './Button';
 import { rhythm } from '../utils/typography';
-import { EASE_IN_OUT_TRANSITION, TEXT_PRIMARY, getTheme } from '../utils/theme';
+import { BACKGROUND_TRANSITION_TIME, EASE_IN_OUT_TRANSITION, getTheme } from '../utils/theme';
 
 const Layout = ({ location, children }) => {
 	const rootPath = `${__PATH_PREFIX__}/`;
 	let header;
 	const { theme, toggleTheme } = useContext(ThemeContext);
-	const { background } = getTheme(theme);
+	const { color, background } = getTheme(theme);
 	const darkTheme = getTheme('dark');
 
 	if (location.pathname !== rootPath) {
@@ -52,10 +52,10 @@ const Layout = ({ location, children }) => {
 				a: {
 					color: 'inherit',
 					textDecoration: 'none',
-					transition: EASE_IN_OUT_TRANSITION,
+					transition: `border-color ${EASE_IN_OUT_TRANSITION}`,
 					borderBottom: `1px dashed transparent`,
 					'&:hover, &:focus': {
-						borderBottomColor: TEXT_PRIMARY,
+						borderBottomColor: color,
 					},
 				},
 			}}
@@ -77,7 +77,7 @@ const Layout = ({ location, children }) => {
 						background,
 						transitionDuration: '0s',
 						// delay background-color transition for nicer animation
-						transitionDelay: theme === 'dark' ? '0s' : '0.75s',
+						transitionDelay: theme === 'dark' ? '0s' : BACKGROUND_TRANSITION_TIME,
 						transitionProperty: 'background-color, color',
 					}}
 				>
@@ -85,15 +85,15 @@ const Layout = ({ location, children }) => {
 					<div
 						className={theme}
 						css={{
-							position: 'fixed',
+							position: 'absolute',
 							background: darkTheme.background,
 							borderRadius: '50%',
 							width: 32,
 							height: 32,
 							zIndex: -1,
-							transition: 'transform 0.75s ease',
+							transition: `transform ${BACKGROUND_TRANSITION_TIME} ease`,
 							'&.dark': {
-								transform: 'scale(200)',
+								transform: 'scale(150)',
 							},
 						}}
 					/>

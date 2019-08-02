@@ -38,7 +38,9 @@
 		"react-helmet": "^5.2.1",
 		"react-icons": "^3.7.0",
 		"react-typography": "^0.16.19",
+		"typeface-fira-mono": "^0.0.72",
 		"typeface-open-sans": "^0.0.54",
+		"typeface-space-mono": "^0.0.71",
 		"typeface-zilla-slab": "^0.0.72",
 		"typography": "^0.16.19"
 	},

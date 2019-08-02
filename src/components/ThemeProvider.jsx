@@ -10,6 +10,8 @@ import {
 	CUBIC_BEZIER_TRANSITION,
 	BACKGROUND_TRANSITION_TIME,
 } from '../utils/theme';
+import PRISM_THEME_LIGHT from '../styles/prism-theme-light';
+import PRISM_THEME_DARK from '../styles/prism-theme-dark';
 
 const ThemeProvider = ({ children }) => {
 	const [theme, toggleTheme] = useTheme();
@@ -33,7 +35,7 @@ const ThemeProvider = ({ children }) => {
 						body: {
 							// for rubber band effect in Chrome on MacOS and outside the scaled div with background color
 							backgroundColor: currentTheme.background,
-							transitionDelay: theme === 'dark' ? BACKGROUND_TRANSITION_TIME : '0s',
+							transitionDelay: theme === 'dark' && key === 1 ? BACKGROUND_TRANSITION_TIME : '0s',
 						},
 						'body.dark': {
 							'.container': {
@@ -46,6 +48,7 @@ const ThemeProvider = ({ children }) => {
 						},
 					})}
 				/>
+				<Global styles={css(theme === 'dark' ? PRISM_THEME_DARK : PRISM_THEME_LIGHT)} />
 				<div
 					className="container"
 					css={{

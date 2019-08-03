@@ -13,7 +13,7 @@ const Layout = ({ location, children }) => {
 	const rootPath = `${__PATH_PREFIX__}/`;
 	let header;
 	const { theme, toggleTheme } = useContext(ThemeContext);
-	const { color, background } = getTheme(theme);
+	const { color, background, secondary } = getTheme(theme);
 	const darkTheme = getTheme('dark');
 
 	if (location.pathname !== rootPath) {
@@ -57,6 +57,10 @@ const Layout = ({ location, children }) => {
 					'&:hover, &:focus': {
 						borderBottomColor: color,
 					},
+				},
+				blockquote: {
+					color: secondary,
+					borderColor: secondary,
 				},
 			}}
 		>

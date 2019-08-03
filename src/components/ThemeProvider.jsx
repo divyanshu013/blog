@@ -35,6 +35,8 @@ const ThemeProvider = ({ children }) => {
 						body: {
 							// for rubber band effect in Chrome on MacOS and outside the scaled div with background color
 							backgroundColor: currentTheme.background,
+							// add transition delay only after initial rendering for continuing reading while maintaining
+							// scroll position in dark mode on refresh
 							transitionDelay: theme === 'dark' && key === 1 ? BACKGROUND_TRANSITION_TIME : '0s',
 						},
 						'body.dark': {

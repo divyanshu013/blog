@@ -13,6 +13,7 @@ module.exports = {
 			instagram: 'https://instagram.com/divyanshu013',
 			email: 'mailto:div.blackcat@gmail.com',
 			stackoverflow: 'https://stackoverflow.com/users/4952669/divyanshu-maithani',
+			newsletter: 'https://tinyletter.com/divyanshu',
 		},
 	},
 	plugins: [

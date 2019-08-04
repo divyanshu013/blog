@@ -24,6 +24,7 @@ const Bio = () => {
 						twitter
 						github
 						youtube
+						newsletter
 					}
 				}
 			}
@@ -75,7 +76,8 @@ const Bio = () => {
 					my spare time I play music and DoTA.
 				</p>
 				<p>
-					You may follow me on <a href={social.twitter}>twitter</a> for latest updates.
+					You may follow me on <a href={social.twitter}>twitter</a> or join my{' '}
+					<a href={social.newsletter}>newsletter</a> for latest updates.
 				</p>
 			</div>
 		</div>

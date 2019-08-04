@@ -101,7 +101,10 @@ export default `
 	}
 
 	.token.atrule,
-	.token.attr-value,
+	.token.attr-value {
+		color: #80cbc4;
+	}
+
 	.token.keyword {
 		color: #f07178;
 		font-style: italic;
@@ -130,5 +133,44 @@ export default `
 
 	.token.entity {
 		cursor: help;
+	}
+
+	.gatsby-highlight-code-line {
+		/* Use a hex code since rgba causes weird overlays with multiple highlighted lines */
+		background-color: #393939;
+		display: block;
+		margin-right: -1em;
+		margin-left: -1em;
+		padding-right: 1em;
+		padding-left: 0.75em;
+		border-left: 0.25em solid #f78c6c;
+	}
+
+	/**
+	 * Add back the container background-color, border-radius, padding, margin
+	 * and overflow that we removed from <pre>.
+	 */
+	.gatsby-highlight {
+		background-color: rgba(255, 255, 255, 0.05);
+		border-radius: 0.3em;
+		margin: 0.5em 0 1.5em 0;
+		padding: 1em;
+		overflow: auto;
+	}
+
+	/**
+	 * Remove the default PrismJS theme background-color, border-radius, margin,
+	 * padding and overflow.
+	 * 1. Make the element just wide enough to fit its content.
+	 * 2. Always fill the visible space in .gatsby-highlight.
+	 * 3. Adjust the position of the line numbers
+	 */
+	.gatsby-highlight pre[class*="language-"] {
+		background-color: transparent;
+		margin: 0;
+		padding: 0;
+		overflow: initial;
+		float: left; /* 1 */
+		min-width: 100%; /* 2 */
 	}
 `;

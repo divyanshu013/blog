@@ -49,8 +49,12 @@ function Seo({ description, lang, meta, title, ogImage }) {
 					content: ogImage,
 				},
 				{
+					name: 'twitter:image',
+					content: ogImage,
+				},
+				{
 					name: `twitter:card`,
-					content: `summary`,
+					content: `summary_large_image`,
 				},
 				{
 					name: `twitter:creator`,

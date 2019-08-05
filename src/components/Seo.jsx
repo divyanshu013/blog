@@ -49,10 +49,6 @@ function Seo({ description, lang, meta, title, ogImage }) {
 					content: ogImage,
 				},
 				{
-					name: 'twitter:image',
-					content: ogImage,
-				},
-				{
 					name: `twitter:card`,
 					content: `summary_large_image`,
 				},
@@ -67,6 +63,10 @@ function Seo({ description, lang, meta, title, ogImage }) {
 				{
 					name: `twitter:description`,
 					content: metaDescription,
+				},
+				{
+					name: 'twitter:image',
+					content: ogImage,
 				},
 			].concat(meta)}
 		/>

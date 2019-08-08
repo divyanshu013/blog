@@ -1,11 +1,13 @@
 {
 	"extends": ["airbnb", "prettier", "prettier/react"],
-	"plugins": ["prettier"],
+	"plugins": ["prettier", "react-hooks"],
 	"rules": {
 		"prettier/prettier": "error",
 		"react/forbid-prop-types": 0,
 		"react/no-array-index-key": 0,
-		"react/require-default-props": 0
+		"react/require-default-props": 0,
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn"
 	},
 	"globals": {
 		"__PATH_PREFIX__": false

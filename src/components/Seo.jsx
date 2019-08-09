@@ -28,7 +28,7 @@ function Seo({ description, lang, meta, title, ogImage: ogImageProp }) {
 
 	const metaDescription = description || site.siteMetadata.description;
 	const ogImage =
-		ogImageProp || `${site.siteMetadata.siteUrl}/${ogImageDefault.childImageSharp.fixed.src}`;
+		ogImageProp || site.siteMetadata.siteUrl.concat(ogImageDefault.childImageSharp.fixed.src);
 
 	return (
 		<Helmet

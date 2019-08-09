@@ -25,7 +25,9 @@ const BlogPost = ({ data, pageContext, location }) => {
 							<Seo
 								title={post.frontmatter.title}
 								description={post.frontmatter.description || post.excerpt}
-								ogImage={`${data.site.siteMetadata.siteUrl}/${post.frontmatter.ogImage.childImageSharp.fixed.src}`}
+								ogImage={data.site.siteMetadata.siteUrl.concat(
+									post.frontmatter.ogImage.childImageSharp.fixed.src,
+								)}
 							/>
 							<BlogInfo date={post.frontmatter.date} timeToRead={post.timeToRead} />
 							<h1

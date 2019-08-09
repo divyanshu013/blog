@@ -29,13 +29,14 @@ function Seo({ description, lang, meta, title, ogImage: ogImageProp }) {
 	const metaDescription = description || site.siteMetadata.description;
 	const ogImage =
 		ogImageProp || site.siteMetadata.siteUrl.concat(ogImageDefault.childImageSharp.fixed.src);
+	const ogTitle = title || site.siteMetadata.title;
 
 	return (
 		<Helmet
 			htmlAttributes={{
 				lang,
 			}}
-			title={title || site.siteMetadata.title}
+			title={ogTitle}
 			titleTemplate={title && `%s | ${site.siteMetadata.title}`}
 			meta={[
 				{
@@ -44,7 +45,7 @@ function Seo({ description, lang, meta, title, ogImage: ogImageProp }) {
 				},
 				{
 					property: `og:title`,
-					content: title,
+					content: ogTitle,
 				},
 				{
 					property: `og:description`,
@@ -68,7 +69,7 @@ function Seo({ description, lang, meta, title, ogImage: ogImageProp }) {
 				},
 				{
 					name: `twitter:title`,
-					content: title,
+					content: ogTitle,
 				},
 				{
 					name: `twitter:description`,

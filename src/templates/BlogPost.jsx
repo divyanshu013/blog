@@ -25,7 +25,7 @@ const BlogPost = ({ data, pageContext, location }) => {
 							<Seo
 								title={post.frontmatter.title}
 								description={post.frontmatter.description || post.excerpt}
-								ogImage={`/og-image/${post.frontmatter.ogImage}`}
+								ogImage={`${data.site.siteMetadata.siteUrl}/${post.frontmatter.ogImage.childImageSharp.fixed.src}`}
 							/>
 							<BlogInfo date={post.frontmatter.date} timeToRead={post.timeToRead} />
 							<h1
@@ -101,6 +101,7 @@ export const pageQuery = graphql`
 			siteMetadata {
 				title
 				author
+				siteUrl
 			}
 		}
 		markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -111,7 +112,13 @@ export const pageQuery = graphql`
 				title
 				date(formatString: "MMMM DD, YYYY")
 				description
-				ogImage
+				ogImage {
+					childImageSharp {
+						fixed(height: 630, width: 1200) {
+							src
+						}
+					}
+				}
 			}
 			timeToRead
 		}

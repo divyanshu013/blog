@@ -10,6 +10,6 @@ You may follow me on [twitter](https://twitter.com/divyanshu013) for latest upda
 
 ## Licenses
 
-The source code is licensed under [MIT](./LICENSE-src.md). Please feel free to use and share it.
+The source code is licensed under [MIT](./LICENSE-src). Please feel free to use and share it.
 
-All rights reserved for the [content](./LICENSE-content.md). Its alright to share snippets or part of the content with proper attribution. It’s not okay to copy paste an entire post (with or without attribution). Please [contact me](https://divyanshu013.dev) in this case.
+All rights reserved for the [content](./LICENSE-content). Its alright to share snippets or part of the content with proper attribution. It’s not okay to copy paste an entire post (with or without attribution). Please [contact me](https://divyanshu013.dev) in this case.

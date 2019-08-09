@@ -3,7 +3,7 @@ title: 'Dark mode in Gatsby'
 description: 'A comprehensive guide on implementing dark mode in GatsbyJS.'
 date: 2019-07-28
 categories: ['gatsby', 'react', 'emotion', 'ssr', 'css']
-ogImage: 'gatsby-dark-mode.png'
+ogImage: ./og-image.png
 ---
 
 I recently migrated my blog from [Medium](https://medium.com/@divyanshu013) to **GatsbyJS**. One of the reasons was to make it more customizable (hello dark mode). However, adding dark mode wasn’t quite straightforward so I decided to document the approach in case anyone else were interested.

@@ -66,20 +66,25 @@ const BlogPost = ({ data, pageContext, location }) => {
 									justifyContent: `space-between`,
 									listStyle: `none`,
 									padding: 0,
+									margin: `${rhythm(1)} 0`,
 								}}
 							>
 								<li>
 									{previous && (
-										<Link to={previous.fields.slug} rel="prev">
-											← {previous.frontmatter.title}
-										</Link>
+										<h4>
+											<Link to={previous.fields.slug} rel="prev">
+												← {previous.frontmatter.title}
+											</Link>
+										</h4>
 									)}
 								</li>
 								<li>
 									{next && (
-										<Link to={next.fields.slug} rel="next">
-											{next.frontmatter.title} →
-										</Link>
+										<h4>
+											<Link to={next.fields.slug} rel="next">
+												{next.frontmatter.title} →
+											</Link>
+										</h4>
 									)}
 								</li>
 							</ul>

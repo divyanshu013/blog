@@ -51,6 +51,13 @@ const ThemeProvider = ({ children }) => {
 					})}
 				/>
 				<Global styles={css(theme === 'dark' ? PRISM_THEME_DARK : PRISM_THEME_LIGHT)} />
+				<Global
+					styles={css(`
+						body.dark {
+							${PRISM_THEME_DARK}
+						}
+				`)}
+				/>
 				<div
 					className="container"
 					css={{

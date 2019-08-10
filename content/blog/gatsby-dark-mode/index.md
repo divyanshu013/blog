@@ -272,6 +272,14 @@ const ThemeProvider = ({ children }) => {
 				<Global
 					styles={css(theme === 'dark' ? PRISM_THEME_DARK : PRISM_THEME_LIGHT)}
 				/>
+				<Global
+					// set prismjs theme to dark for initial load
+					styles={css(`
+						body.dark {
+							${PRISM_THEME_DARK}
+						}
+					`)}
+				/>
 				<div
 					css={{
 						color,

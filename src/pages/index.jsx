@@ -41,6 +41,7 @@ const BlogIndex = ({ data, location }) => {
 								<h3
 									css={{
 										marginTop: rhythm(1 / 4),
+										marginBottom: rhythm(0.5),
 									}}
 								>
 									<Link style={{ boxShadow: `none` }} to={node.fields.slug}>
@@ -48,6 +49,7 @@ const BlogIndex = ({ data, location }) => {
 									</Link>
 								</h3>
 								<p
+									css={{ marginBottom: rhythm(1.5) }}
 									dangerouslySetInnerHTML={{
 										__html: node.frontmatter.description || node.excerpt,
 									}}

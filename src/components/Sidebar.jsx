@@ -100,25 +100,74 @@ const Sidebar = () => {
 					justifyContent: 'start',
 				}}
 			>
-				<Button as="a" circular href={social.twitter} target="_blank">
+				<Button
+					aria-label="Link to my Twitter"
+					as="a"
+					circular
+					href={social.twitter}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<FiTwitter />
 				</Button>
-				<Button as="a" circular href={social.github} target="_blank">
+				<Button
+					aria-label="Link to my GitHub"
+					as="a"
+					circular
+					href={social.github}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<FiGithub />
 				</Button>
-				<Button as="a" circular href={social.stackoverflow} target="_blank">
+				<Button
+					aria-label="Link to my Stackoverflow"
+					as="a"
+					circular
+					href={social.stackoverflow}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<FaStackOverflow />
 				</Button>
-				<Button as="a" circular href={social.youtube} target="_blank">
+				<Button
+					aria-label="Link to my JavaScript YouTube channel"
+					as="a"
+					circular
+					href={social.youtube}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<FiYoutube />
 				</Button>
-				<Button as="a" circular href={social.instagram} target="_blank">
+				<Button
+					aria-label="Link to my Instagram"
+					as="a"
+					circular
+					href={social.instagram}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<FiInstagram />
 				</Button>
-				<Button as="a" circular href={social.soundcloud} target="_blank">
+				<Button
+					aria-label="Link to my Soundcloud"
+					as="a"
+					circular
+					href={social.soundcloud}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<FaSoundcloud />
 				</Button>
-				<Button as="a" circular href={social.email} target="_blank">
+				<Button
+					aria-label="Email me"
+					as="a"
+					circular
+					href={social.email}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<FiMail />
 				</Button>
 			</div>

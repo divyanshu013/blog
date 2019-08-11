@@ -74,6 +74,7 @@ const Layout = ({ location, children }) => {
 			>
 				{header}
 				<Button
+					aria-label="Light and dark mode switch"
 					circular
 					onClick={toggleTheme}
 					className="container"

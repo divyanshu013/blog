@@ -122,3 +122,5 @@ Following links are worth checking out if you would like to explore the topic in
 3. JavaScript's [concurrency model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
 4. NodeJS [event loop, timers and `process.nextTick`](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
 5. Task queue [specs](https://html.spec.whatwg.org/multipage/webappapis.html#task-queue) and the micro task checkpoint [specs](https://html.spec.whatwg.org/multipage/webappapis.html#perform-a-microtask-checkpoint)
+
+_Thanks to my friend [Akshendra](https://github.com/akshendra) for reviewing this piece._

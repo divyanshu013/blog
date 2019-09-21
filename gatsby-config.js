@@ -1,7 +1,7 @@
 module.exports = {
 	siteMetadata: {
 		bio: 'Life, music, code and things in between…',
-		title: `Div’s Blog`,
+		title: `Divyanshu Maithani`,
 		author: `Divyanshu Maithani`,
 		description: `Personal blog of Divyanshu Maithani`,
 		siteUrl: `https://divyanshu013.dev`,

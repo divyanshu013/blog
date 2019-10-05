@@ -33,7 +33,7 @@ const Bio = () => {
 
 	const { author, social } = data.site.siteMetadata;
 	const { theme } = useContext(ThemeContext);
-	const { color } = getTheme(theme);
+	const { color, secondary } = getTheme(theme);
 	return (
 		<div
 			css={{
@@ -68,7 +68,7 @@ const Bio = () => {
 					borderRadius: `50%`,
 				}}
 			/>
-			<div css={{ fontFamily: 'Zilla Slab' }}>
+			<div css={{ fontSize: 16, color: secondary }}>
 				<p>
 					Personal blog of <a href={social.twitter}>{author}</a>. I’m a{' '}
 					<a href={social.github}>JavaScript engineer</a> working with React, React Native, GraphQL

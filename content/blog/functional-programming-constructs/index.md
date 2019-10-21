@@ -1,6 +1,6 @@
 ---
 title: 'Functional programming constructs'
-description: 'Functional programming concepts in JavaScript'
+description: ''
 date: 2019-10-11
 categories: ['javascript', 'functional-programming']
 ogImage: ./og-image.png
@@ -97,7 +97,7 @@ const array = [1, 2, 3].map(num => addAndMultiply(num)); // [4, 6, 8]
 const anotherArray = [1, 2, 3].map(addAndMultiply); // [4, 6, 8]
 ```
 
-The biggest benefit of composition is it leads to better abstractions. Composition also leads to clearer code and reusability as compared to classical inheritance based approach. Here's a quote from the [Functional Light JavaScript](https://github.com/getify/Functional-Light-JS) book, which has become my favorite explanation for abstraction:
+The biggest benefit of composition is it **leads to better abstractions**. Composition also leads to clearer code and reusability as compared to classical inheritance based approach. Here's a quote from the [Functional Light JavaScript](https://github.com/getify/Functional-Light-JS) book, which has become my favorite explanation for abstraction:
 
 > ... abstraction is a process by which the programmer associates a name with a potentially complicated program fragment, which can then be thought of in terms of its purpose of function, rather than in terms of how that function is achieved.
 >
@@ -115,9 +115,9 @@ Functional programming favors **value immutability**. Whenever we need to change
 
 #### Side effects
 
-Its impossible to do anything useful in a software without doing any side effects, the existence or non existence of such a software would be equivalent. Instead, functional programming encourages us to make such side effects **more obvious** and **isolated**.
+It is impossible to do anything useful in a software without causing any side effects, the existence or non existence of such a software would be equivalent. Instead, functional programming encourages us to make such side effects **more obvious** and **isolated**.
 
-One of the ways of achieving this is by **favoring pure functions over impure**. A pure function doesn't rely on external factors and doesn't cause any side effects. Side effects are instead isolated and handled with impure functions. For example:
+One of the ways of achieving this is by **favoring pure functions over impure**. A pure function neither relies on any external factors nor causes any side effects. Side effects are instead isolated and handled with impure functions. For example:
 
 ```js
 // a pure function - no side effects
@@ -152,4 +152,4 @@ Following JavaScript libraries provide a lot of functional utilities:
 1. [RamdaJS](https://ramdajs.com/)
 2. [Lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide)
 
-_Thanks to my friend [@dhruvdutt](https://twitter.com/dhruvdutt) for reviewing this post_
+_Thanks to my friends [@dhruvdutt](https://twitter.com/dhruvdutt) and [@metagrover](https://twitter.com/metagrover) for early feedback and reviewing this post._

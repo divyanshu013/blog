@@ -8,6 +8,18 @@ I’m a JavaScript engineer working with React, React Native, GraphQL and Node. 
 
 You may follow me on [twitter](https://twitter.com/divyanshu013) for latest updates.
 
+## ToDo
+
+- [ ] Creating series of blog posts. An easy way to link them.
+- [ ] Bookmarking posts #1
+- [ ] Discuss/share on Twitter or GitHub #2
+- [ ] Heart posts #3
+- [ ] Uses page #5
+- [ ] About page #6
+- [ ] Favorite quotes
+- [ ] Interesting lists (games, podcasts, etc.)
+- [ ] Open external links in new tab be default
+
 ## Licenses
 
 The source code is licensed under [MIT](./LICENSE-src). Please feel free to use and share it.

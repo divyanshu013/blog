@@ -151,3 +151,5 @@ Following JavaScript libraries provide a lot of functional utilities:
 
 1. [RamdaJS](https://ramdajs.com/)
 2. [Lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide)
+
+_Thanks to my friend [@dhruvdutt](https://twitter.com/dhruvdutt) for reviewing this post_

@@ -439,3 +439,7 @@ export default Button;
 ## Summary
 
 Although, this article is based on Gatsby, a similar approach can be used for any React application especially with SSR. You may also check out the entire source code in the [GitHub repo](https://github.com/divyanshu013/blog).
+
+## Related
+
+- [OG tags in Gatsby](/blog/gatsby-og-tags/)

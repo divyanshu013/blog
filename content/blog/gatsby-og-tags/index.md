@@ -229,3 +229,7 @@ To summarize this blog post here's what I did:
 1. Added a `Seo` component which sets the appropriate `meta` tags.
 1. Included the OG image in the graphql query. The final url should be prefixed by the `siteUrl` which begins with `http://` or `https://`.
 1. Added the OG images for blog posts in frontmatter and included the field in the graphql query.
+
+## Related
+
+- [Dark mode in Gatsby](/blog/gatsby-dark-mode/)

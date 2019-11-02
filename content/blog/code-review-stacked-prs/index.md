@@ -90,7 +90,7 @@ The reviewer can start the review process from any PR, though it would make more
 
 Once a PR is approved, we would merge it if there are no other PRs on top of it. For example, don't merge PR 2 before PR 3 is merged. Once all stacked PRs are merged, create a final integration PR from `feat/user-profile-screen` to `master`. This can be a large PR but since the code is already reviewed in the stacked PRs it can be skimmed through and approved easily.
 
-> **Note**
+> **Tip**
 >
 > If PR 1 is approved before you start on PR 2, you can merge PR 1 and then create a new branch off the integration branch (`feat/user-profile-screen`) itself instead of creating a stacked PR 2
 

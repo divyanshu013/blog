@@ -1,7 +1,7 @@
 ---
 title: 'OG tags in Gatsby'
 description: 'A comprehensive guide on implementing open graph tags in GatsbyJS.'
-date: 2019-08-09
+date: 2019-08-10
 categories: ['gatsby']
 ogImage: ./og-image.png
 ---

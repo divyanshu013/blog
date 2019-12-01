@@ -1,7 +1,7 @@
 ---
 title: 'Functional programming constructs'
 description: ''
-date: 2019-10-11
+date: 2019-10-21
 categories: ['javascript', 'functional-programming']
 ogImage: ./og-image.png
 ---
@@ -135,9 +135,11 @@ function handleSideEffects() {
 }
 ```
 
-## Closing thoughts
+## Further reading
 
-This is the first post in the functional programming series. Stay tuned for future posts as I share my learnings.
+This is the **first post** in the functional programming series. Continue reading:
+
+- [Partial application](/blog/functional-programming-partial-application)
 
 ## External resources
 

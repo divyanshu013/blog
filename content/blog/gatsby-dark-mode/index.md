@@ -1,7 +1,7 @@
 ---
 title: 'Dark mode in Gatsby'
 description: 'A comprehensive guide on implementing dark mode in GatsbyJS.'
-date: 2019-07-28
+date: 2019-08-04
 categories: ['gatsby', 'react', 'emotion', 'ssr', 'css']
 ogImage: ./og-image.png
 ---

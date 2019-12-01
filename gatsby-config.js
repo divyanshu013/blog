@@ -63,7 +63,7 @@ module.exports = {
 				name: `Div's Blog`,
 				short_name: `Div`,
 				start_url: `/`,
-				background_color: `#000000`,
+				background_color: `#1d1d1d`,
 				theme_color: `#fa8072`,
 				display: `minimal-ui`,
 				icon: `static/favicon.png`,

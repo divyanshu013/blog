@@ -1,7 +1,7 @@
 ---
 title: 'Temporal Dead Zone'
 description: 'Temporal Dead Zone (TDZ) for block scoped variables in JavaScript'
-date: 2019-08-15
+date: 2019-08-16
 categories: ['javascript']
 ogImage: ./og-image.png
 ---

@@ -105,19 +105,23 @@ The biggest benefit of composition is it **leads to better abstractions**. Compo
 >
 > — **Michael L. Scott, Programming Language Pragmatics**
 
-### Mutation and side effects
+### Mutation, side effects and pure functions
 
 Functional programming avoids mutation of state and side effects. These may include modifying variables outside the scope of function, database or network operations, DOM manipulation and even using random numbers.
 
-#### Mutation
+**Mutation**
 
 Functional programming favors **value immutability**. Whenever we need to change the state in a program, we should create and track a new value for the state (instead of mutating the existing one).
 
-#### Side effects
+**Side effects**
 
-It is impossible to do anything useful in a software without causing any side effects, the existence or non existence of such a software would be equivalent. Instead, functional programming encourages us to make such side effects **more obvious** and **isolated**.
+It is impossible to do anything useful in a software without causing any side effects, the existence or non existence of such a software would be equivalent. Instead, functional programming encourages us to make such side effects **more obvious** and **isolated**. One of the ways of achieving this is by **favoring pure functions over impure**.
 
-One of the ways of achieving this is by **favoring pure functions over impure**. A pure function neither relies on any external factors nor causes any side effects. Side effects are instead isolated and handled with impure functions. For example:
+**Pure functions**
+
+A pure function, given the same input(s) provides the same output. More formally, a pure function is one which has **referential transparency**. The function invocation can be replaced by its return value and would have no effect on the program. Some functional languages (such as Haskell) makes use of this property during compilation to optimize the code, since they may safely replace pure function calls directly with the return value.
+
+A pure function neither relies on any external factors nor causes any side effects. Side effects are instead isolated and handled with impure functions. For example:
 
 ```js
 // a pure function - no side effects

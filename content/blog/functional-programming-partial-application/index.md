@@ -236,3 +236,6 @@ console.log(sum(1, 2, 3)); // 6
 ## Further reading
 
 This is the second post I wrote about functional programming. You may check out the [first post](/blog/functional-programming-constructs) which also includes links to free resources. I'll continue to share my learnings on functional programming in future posts.
+
+- [Functional programming constructs](/blog/functional-programming-constructs)
+- [Point free programming and composition](/blog/point-free-programming-and-composition)

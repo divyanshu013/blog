@@ -19,6 +19,8 @@ You may follow me on [twitter](https://twitter.com/divyanshu013) for latest upda
 - [ ] Favorite quotes
 - [ ] Interesting lists (games, podcasts, etc.)
 - [ ] Open external links in new tab be default
+- [ ] Text Highlight color
+- [ ] Dynamically switch dark mode based on system settings
 
 ## Licenses
 

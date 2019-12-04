@@ -144,6 +144,7 @@ function handleSideEffects() {
 This is the **first post** in the functional programming series. Continue reading:
 
 - [Partial application](/blog/functional-programming-partial-application)
+- [Point free programming and composition](/blog/point-free-programming-and-composition)
 
 ## External resources
 

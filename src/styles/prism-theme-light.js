@@ -1,4 +1,8 @@
 export default `
+	::selection {
+		background: #feb;
+	}
+
 	code[class*='language-'],
 	pre[class*='language-'] {
 		color: #657b83; /* base00 */

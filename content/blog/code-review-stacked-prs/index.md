@@ -1,6 +1,6 @@
 ---
-title: 'Stacked PRs'
-description: 'Effective code review on merging large changes with stacked pull requests'
+title: 'Stacked Pull Requests'
+description: 'Effective code review on merging large changes with stacked PRs'
 date: 2019-11-02
 categories: ['software-engineering']
 ogImage: ./og-image.png

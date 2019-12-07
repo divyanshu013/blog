@@ -98,5 +98,6 @@ module.exports = {
 				respectDNT: true,
 			},
 		},
+		'gatsby-plugin-catch-links',
 	],
 };

@@ -1,7 +1,7 @@
 ---
 title: 'HTTP Requests'
 description: 'Behavior and properties of different HTTP request methods'
-date: 2019-12-08
+date: 2019-12-10
 categories: ['web']
 ogImage: ./og-image.png
 ---

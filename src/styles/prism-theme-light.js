@@ -3,6 +3,14 @@ export default `
 		background: #feb;
 	}
 
+	kbd {
+		padding: 4px 8px;
+		border: 1px solid #657b83;
+		border-radius: 4px;
+		font-size: 1rem;
+		margin: 0px 4px;
+	}
+
 	code[class*='language-'],
 	pre[class*='language-'] {
 		color: #657b83; /* base00 */

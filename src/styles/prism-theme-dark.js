@@ -3,6 +3,14 @@ export default `
 		background: blueviolet;
 	}
 
+	kbd {
+		padding: 4px 8px;
+		border: 1px solid #e3e8ff;
+		border-radius: 4px;
+		font-size: 1rem;
+		margin: 0px 4px;
+	}
+
 	code[class*='language-'],
 	pre[class*='language-'] {
 		color: #e3e8ff; /* base00 */

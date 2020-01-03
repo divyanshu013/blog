@@ -19,6 +19,8 @@ You may follow me on [twitter](https://twitter.com/divyanshu013) for latest upda
 - [ ] Favorite quotes
 - [ ] Interesting lists (games, podcasts, etc.)
 - [ ] Dynamically switch dark mode based on system settings
+- [ ] Offline ready
+- [ ] Favorite books
 
 ## Licenses
 

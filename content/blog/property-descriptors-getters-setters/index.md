@@ -271,6 +271,8 @@ myBooksList.value = 'Animal Farm';
 console.log(myBooksList.length); // 1
 ```
 
+Voila! We just created our own `length` property ✌️
+
 ## Further reading
 
 - [`Object.defineProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)

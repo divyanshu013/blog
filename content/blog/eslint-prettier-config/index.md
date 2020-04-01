@@ -10,6 +10,8 @@ ogImage: ./og-image.png
 
 This problem can also arise in your organization as the number of projects starts to grow. Here the need for keeping things consistent and in sync is more important since different developers may be working across projects.
 
+> I also recorded a short video for this blog. Coming soon on my [YouTube channel](https://www.youtube.com/c/WhatTheJavaScript)
+
 ## Config package
 
 Both [Eslint](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) and [Prettier](https://prettier.io/docs/en/configuration.html#sharing-configurations) are configurable through a configuration object (which can be made available through a common node package via NPM).

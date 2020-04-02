@@ -10,7 +10,7 @@ ogImage: ./og-image.png
 
 This problem can also arise in your organization as the number of projects starts to grow. Here the need for keeping things consistent and in sync is more important since different developers may be working across projects.
 
-> I also recorded a short video for this blog. Coming soon on my [YouTube channel](https://www.youtube.com/c/WhatTheJavaScript)
+> I also recorded a [short video](https://www.youtube.com/watch?v=-ah-kEf-owM) for this blog on my YouTube channel!
 
 ## Config package
 

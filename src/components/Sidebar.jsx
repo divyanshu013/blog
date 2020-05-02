@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
-import { FiTwitter, FiGithub, FiInstagram, FiYoutube, FiMail } from 'react-icons/fi';
-import { FaSoundcloud, FaStackOverflow } from 'react-icons/fa';
+import { FiTwitter, FiGithub, FiInstagram, FiYoutube, FiMail, FiMusic } from 'react-icons/fi';
+import { FaStackOverflow, FaGoodreadsG } from 'react-icons/fa';
 import { mediaMax } from '@divyanshu013/media';
 
 import Button from './Button';
@@ -26,11 +26,12 @@ const SIDEBAR_QUERY = graphql`
 				social {
 					twitter
 					github
-					soundcloud
+					music
 					youtube
 					email
 					instagram
 					stackoverflow
+					goodreads
 				}
 			}
 		}
@@ -101,6 +102,7 @@ const Sidebar = () => {
 				}}
 			>
 				<Button
+					title="Twitter"
 					aria-label="Link to my Twitter"
 					as="a"
 					circular
@@ -111,6 +113,7 @@ const Sidebar = () => {
 					<FiTwitter />
 				</Button>
 				<Button
+					title="GitHub"
 					aria-label="Link to my GitHub"
 					as="a"
 					circular
@@ -121,6 +124,7 @@ const Sidebar = () => {
 					<FiGithub />
 				</Button>
 				<Button
+					title="Stackoverflow"
 					aria-label="Link to my Stackoverflow"
 					as="a"
 					circular
@@ -131,6 +135,7 @@ const Sidebar = () => {
 					<FaStackOverflow />
 				</Button>
 				<Button
+					title="My coding YouTube channel"
 					aria-label="Link to my JavaScript YouTube channel"
 					as="a"
 					circular
@@ -141,6 +146,7 @@ const Sidebar = () => {
 					<FiYoutube />
 				</Button>
 				<Button
+					title="Instagram"
 					aria-label="Link to my Instagram"
 					as="a"
 					circular
@@ -151,16 +157,29 @@ const Sidebar = () => {
 					<FiInstagram />
 				</Button>
 				<Button
-					aria-label="Link to my Soundcloud"
+					title="Some music I've covered"
+					aria-label="Link to my music"
 					as="a"
 					circular
-					href={social.soundcloud}
+					href={social.music}
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<FaSoundcloud />
+					<FiMusic />
 				</Button>
 				<Button
+					title="What I'm reading these days"
+					aria-label="Link to my Goodreads"
+					as="a"
+					circular
+					href={social.goodreads}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<FaGoodreadsG />
+				</Button>
+				<Button
+					title="Good old email"
 					aria-label="Email me"
 					as="a"
 					circular

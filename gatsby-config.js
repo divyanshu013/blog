@@ -9,7 +9,7 @@ module.exports = {
 			twitter: `https://twitter.com/divyanshu013`,
 			github: 'https://github.com/divyanshu013',
 			youtube: 'https://youtube.com/WhatTheJavaScript',
-			soundcloud: 'https://soundcloud.com/divyanshu-maithani',
+			music: 'https://soundcloud.com/summer-streets',
 			instagram: 'https://instagram.com/divyanshu013',
 			email: 'mailto:div.blackcat@gmail.com',
 			stackoverflow: 'https://stackoverflow.com/users/4952669/divyanshu-maithani',

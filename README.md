@@ -8,6 +8,8 @@ I’m a JavaScript engineer working with React, React Native, GraphQL and Node. 
 
 You may follow me on [twitter](https://twitter.com/divyanshu013) for latest updates.
 
+If you're using this as a starter or template for your own blog, I would be happy to add a link here. Please create a PR or issue with a link to your blog if you would like to feature it here :)
+
 ## ToDo
 
 - [ ] Creating series of blog posts. An easy way to link them.
@@ -20,7 +22,6 @@ You may follow me on [twitter](https://twitter.com/divyanshu013) for latest upda
 - [ ] Interesting lists (games, podcasts, etc.)
 - [ ] Dynamically switch dark mode based on system settings
 - [ ] Offline ready
-- [ ] Favorite books
 
 ## Licenses
 

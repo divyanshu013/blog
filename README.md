@@ -10,19 +10,6 @@ You may follow me on [twitter](https://twitter.com/divyanshu013) for latest upda
 
 If you're using this as a starter or template for your own blog, I would be happy to add a link here. Please create a PR or issue with a link to your blog if you would like to feature it here :)
 
-## ToDo
-
-- [ ] Creating series of blog posts. An easy way to link them.
-- [ ] Bookmarking posts #1
-- [ ] Discuss/share on Twitter or GitHub #2
-- [ ] Heart posts #3
-- [ ] Uses page #5
-- [ ] About page #6
-- [ ] Favorite quotes
-- [ ] Interesting lists (games, podcasts, etc.)
-- [ ] Dynamically switch dark mode based on system settings
-- [ ] Offline ready
-
 ## Licenses
 
 The source code is licensed under [MIT](./LICENSE-src). Please feel free to use and share it.

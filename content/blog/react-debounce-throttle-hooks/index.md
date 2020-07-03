@@ -217,6 +217,7 @@ In this post I covered only `debounce` but `throttle` can be used in a similar f
 ## Further reading
 
 - [Making setInterval Declarative with React Hooks](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
+- [GitHub repo](https://github.com/wtjs/react-debounce-throttle-hooks)
 
 If you've suggestions for a better way for writing these hooks, I would be happy to receive feedback and update this post.
 

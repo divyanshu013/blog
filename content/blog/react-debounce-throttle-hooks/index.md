@@ -12,7 +12,7 @@ ogImage: ./og-image.png
 
 There are a ton of blog posts around debounce and throttle so I won't be diving into how to write our own debounce and throttle. For brevity, consider [`debounce`](https://lodash.com/docs/4.17.15#debounce) and [`throttle`](https://lodash.com/docs/4.17.15#throttle) from Lodash.
 
-If you need a quick refresher, both accept a (callback) function and a _delay_ in milliseconds (say `x`) and returns another function with some special behavior:
+If you need a quick refresher, both accept a (callback) function and a _delay_ in milliseconds (say `x`) and return another function with some special behavior:
 
 - `debounce`: returns a function that can be called any number of times (possibly in quick successions) but would only invoke the callback **after waiting** for `x` ms from the last call.
 - `throttle`: returns a function that can be called any number of times (possibly in quick successions) but would only invoke the callback atmost **once** every `x` ms.
@@ -118,7 +118,7 @@ function App() {
 
 ## useRef
 
-[`useRef`](https://reactjs.org/docs/hooks-reference.html#useref) gives us a mutable object whose `current` property refers to the passed initial value. If we don't change it manually, the value would persist for the entire lifetime of the component. This is similar to class instance fields (as we had earlier with classes, defining methods and properties on `this`).
+[`useRef`](https://reactjs.org/docs/hooks-reference.html#useref) gives us a mutable object whose `current` property refers to the passed initial value. If we don't change it manually, the value would persist for the entire lifetime of the component. This is similar to class instance properties (i.e. defining methods and properties on `this`).
 
 This also works as expected:
 
@@ -150,7 +150,7 @@ function App() {
 
 ## Extracting a custom hook
 
-Both the above examples using `useCallback` and `useRef` works fine for our usecase. This is fine for one off cases but wouldn't it be nice if there was a simpler API? It would be nice if we don't have to think about putting these callbacks in `useCallback` and `useRef`. We can certainly do so by abstracting this logic into a custom `useDebounce` hook!
+Both of the above examples using `useCallback` and `useRef` work fine for our usecase. This is good for one off cases but wouldn't it be nice if there was a simpler API? The code will be much more readable if we don't have to assemble the debounce logic with `useCallback` and `useRef`. We can certainly do so by abstracting this logic into a custom `useDebounce` hook!
 
 Here's one way to do it with `useCallback`:
 
@@ -210,7 +210,7 @@ function useDebounce(callback, delay) {
 }
 ```
 
-This isn't as clean as the previous example with `useCallback` but I think perhaps the error I'm getting is a bug and would be fixed in the TypeScript linter soon.
+This isn't as clean as the previous example with `useCallback`, but perhaps the lint warning I'm getting is a bug and will probably be fixed in the TypeScript linter soon.
 
 In this post I covered only `debounce` but `throttle` can be used in a similar fashion. Similarly, you may abstract out the logic into a `useThrottle` hook.
 

@@ -8,6 +8,8 @@ ogImage: ./og-image.png
 
 [Hooks](https://reactjs.org/docs/hooks-intro.html) are a brilliant addition to React. They simplify a lot of logic that had to be earlier split up into different lifecycles with `class` components. They do, however, require a _different_ mental model, [especially for timers](https://overreacted.io/making-setinterval-declarative-with-react-hooks/).
 
+> I also recorded a short [video series](https://www.youtube.com/playlist?list=PLMV09mSPNaQlN92-1Dkz5NDlNgGQJEo75) on this article which you may find more explanatory.
+
 ## Debounce and throttle
 
 There are a ton of blog posts around debounce and throttle so I won't be diving into how to write our own debounce and throttle. For brevity, consider [`debounce`](https://lodash.com/docs/4.17.15#debounce) and [`throttle`](https://lodash.com/docs/4.17.15#throttle) from Lodash.
@@ -217,6 +219,7 @@ In this post I covered only `debounce` but `throttle` can be used in a similar f
 ## Further reading
 
 - [Making setInterval Declarative with React Hooks](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
+- [Video series](https://www.youtube.com/playlist?list=PLMV09mSPNaQlN92-1Dkz5NDlNgGQJEo75)
 - [GitHub repo](https://github.com/wtjs/react-debounce-throttle-hooks)
 
 If you've suggestions for a better way for writing these hooks, I would be happy to receive feedback and update this post.

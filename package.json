@@ -9,7 +9,7 @@
 		"url": "https://github.com/divyanshu013"
 	},
 	"dependencies": {
-		"@divyanshu013/inspirational-quotes": "^1.0.0",
+		"@divyanshu013/inspirational-quotes": "^1.0.1",
 		"@divyanshu013/media": "^1.0.0",
 		"@emotion/core": "^10.0.35",
 		"@emotion/styled": "^10.0.27",
@@ -49,6 +49,7 @@
 		"typography": "^0.16.19"
 	},
 	"devDependencies": {
+		"babel-eslint": "^10.1.0",
 		"eslint": "7.8.1",
 		"eslint-config-airbnb": "18.2.0",
 		"eslint-config-prettier": "^6.11.0",

@@ -1,5 +1,4 @@
 // custom typefaces
-import 'typeface-open-sans';
-import 'typeface-zilla-slab';
-import 'typeface-fira-mono';
-import 'typeface-space-mono';
+import 'fontsource-open-sans';
+import 'fontsource-zilla-slab';
+import 'fontsource-cascadia-code';

@@ -7049,6 +7049,21 @@ follow-redirects@^1.10.0:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.0.tgz#b42e8d93a2a7eea5ed88633676d6597bc8e384db"
   integrity sha512-aq6gF1BEKje4a9i9+5jimNFIpq4Q1WiwBToeRK5NvZBd/TRsmW8BsJfOEGkr76TbOyPVD3OVDN910EcUNtRYEA==
 
+fontsource-cascadia-code@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/fontsource-cascadia-code/-/fontsource-cascadia-code-3.0.5.tgz#dcf7a028482c25dd1e5ce529cc741a9058936ddb"
+  integrity sha512-tYxWtOBLndUxX1k33dGx6Q6e9esMmySefuJnttwV1XFtgYB++O9r0SXLug0HGKtVUInpLWbFpb0HmfGzz5qamw==
+
+fontsource-open-sans@^3.0.9:
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/fontsource-open-sans/-/fontsource-open-sans-3.0.9.tgz#a497140bce061e75ad442a7f69df3bf3d87e527a"
+  integrity sha512-NEgZAgtpvz7iYZ/IlojOOy6hRLaLmxnxzEKYXnq0KU/X8lb9cD7d0XImykhfksK1/JZ6xyKQKjYq4PycHQZK9w==
+
+fontsource-zilla-slab@^3.0.9:
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/fontsource-zilla-slab/-/fontsource-zilla-slab-3.0.9.tgz#177f28aa71d02d07a7d4dce8af8006419b073816"
+  integrity sha512-0RT1FLwUjRVDCrMrBvYWr1XFAycAcr1d1tI1ECVdtAGW5D4PafoG84tzP3zW2wTSe3oxxhQEs1qHxktyesawFw==
+
 for-each@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/for-each/-/for-each-0.3.3.tgz#69b447e88a0a5d32c3e7084f3f1710034b21376e"
@@ -15828,26 +15843,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-
-typeface-fira-mono@^1.1.13:
-  version "1.1.13"
-  resolved "https://registry.yarnpkg.com/typeface-fira-mono/-/typeface-fira-mono-1.1.13.tgz#753c3e6100e3620581b94f5deb86ce8f8ed3bda8"
-  integrity sha512-+1T4zpyB2kYoOP7K0+k4gSaxchkwh/UeOC30h1vstAetF4+eJc6qVI3adrFVOPB7sYwHXJtLcfkKG2fAMs3TgQ==
-
-typeface-open-sans@^1.1.13:
-  version "1.1.13"
-  resolved "https://registry.yarnpkg.com/typeface-open-sans/-/typeface-open-sans-1.1.13.tgz#32a09ebd7df59601e01ad81216f98ce641eeafd1"
-  integrity sha512-lVGVHvYl7UJDFB9vN8r7NHw3sVm7Rjeow6b9AeABc/J+2mDaCkmcdVtw3QZnsJW39P+xm5zeggIj9gLHYGn9Iw==
-
-typeface-space-mono@^1.1.13:
-  version "1.1.13"
-  resolved "https://registry.yarnpkg.com/typeface-space-mono/-/typeface-space-mono-1.1.13.tgz#b63acc9511d0c28b60a85d4e6805a716d9bdfc7a"
-  integrity sha512-F5ogC58i6PqmG+Q35gXHIZsaP822Lyd+xNBGYhNDKsffxaloamA9ecDum7OZG0qfQtmsuPbT7fiFOtLR1dPoow==
-
-typeface-zilla-slab@^1.1.13:
-  version "1.1.13"
-  resolved "https://registry.yarnpkg.com/typeface-zilla-slab/-/typeface-zilla-slab-1.1.13.tgz#3cae461c85bd82aa226352306a5de6aa35a05959"
-  integrity sha512-u6fGAsLM5diJnwr+aASBO+eFp+1jx1f6UmOCN/YmfldqrCCD+70wriBDibaZJaUUKcN5WtealeAhPU1tOUDYZg==
 
 typography-normalize@^0.16.19:
   version "0.16.19"

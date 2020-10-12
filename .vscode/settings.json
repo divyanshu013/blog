@@ -37,5 +37,6 @@
 		"typescriptreact",
 		"yaml",
 		"yml"
-	]
+	],
+	"editor.tabSize": 2
 }

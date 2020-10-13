@@ -105,6 +105,16 @@ const Layout = ({ location, children }) => {
 					/>
 				</Button>
 			</header>
+			{location.pathname === rootPath && (
+				<div
+					css={{
+						display: 'flex',
+						marginBottom: rhythm(0.5),
+					}}
+				>
+					<Link to="/about">About</Link>
+				</div>
+			)}
 			<main>{children}</main>
 			<Footer />
 		</div>

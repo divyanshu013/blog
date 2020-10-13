@@ -14,7 +14,7 @@ export default `
 	code[class*='language-'],
 	pre[class*='language-'] {
 		color: #657b83; /* base00 */
-		font-family: 'Fira Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+		font-family: 'Cascadia Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 		font-size: 16px;
 		text-align: left;
 		white-space: pre;
@@ -122,8 +122,7 @@ export default `
 
 	.token.keyword {
 		color: #d33682;
-		font-style: italic;
-		font-family: 'Space Mono';
+		font-family: 'Cascadia Code';
 	}
 
 	.token.function,
@@ -142,8 +141,7 @@ export default `
 		font-weight: bold;
 	}
 	.token.italic {
-		font-family: 'Space Mono';
-		font-style: italic;
+		font-family: 'Cascadia Code';
 	}
 
 	.token.entity {

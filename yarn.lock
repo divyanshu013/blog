@@ -1228,10 +1228,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@divyanshu013/inspirational-quotes@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@divyanshu013/inspirational-quotes/-/inspirational-quotes-1.0.2.tgz#8b5ace6a838a346e5ff1b70fb67675f180a2bb06"
-  integrity sha512-1n4Zi+ClVsWT1qP0cvRCnds5pQ5jSTETnPp3lq3ysU1IlVtlfNPqNIkIlsDaqt6cZp97hZumOWuz9Qohk36vfQ==
+"@divyanshu013/inspirational-quotes@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@divyanshu013/inspirational-quotes/-/inspirational-quotes-1.0.4.tgz#d9241b55e7450f850398305980f177214306653f"
+  integrity sha512-qq/8a3MV6xMk+VUOg2TcsOHLYDqFy1nP/uW8m5IhJ1WvgzfxXjcOjJ/GaUt3yX1icPmplQWhcPqXdyu0bYWL9A==
 
 "@divyanshu013/media@^1.0.0":
   version "1.0.0"

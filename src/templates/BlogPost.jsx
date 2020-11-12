@@ -88,6 +88,15 @@ const BlogPost = ({ data, pageContext, location }) => {
 									)}
 								</li>
 							</ul>
+							<script
+								src="https://utteranc.es/client.js"
+								repo="divyanshu013/blog"
+								issue-term="pathname"
+								label="comment :speech_balloon:"
+								theme="github-dark"
+								crossOrigin="anonymous"
+								async
+							/>
 						</Layout>
 					)}
 				</ThemeContext.Consumer>

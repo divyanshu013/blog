@@ -1,7 +1,7 @@
 ---
 title: 'Ten things I’ve learnt'
 description: 'A personal list of ten things I’ve learnt condensed into one post'
-date: 2020-10-28
+date: 2020-10-30
 categories: ['life']
 ogImage: ./og-image.png
 ---

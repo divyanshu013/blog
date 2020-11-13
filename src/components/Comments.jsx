@@ -28,10 +28,11 @@ const Comments = () => {
 		script.setAttribute('crossorigin', 'anonymous');
 
 		const scriptParentNode = document.getElementById(commentNodeId);
-		if (scriptParentNode.firstChild) {
-			scriptParentNode.removeChild(scriptParentNode.firstChild);
-		}
 		scriptParentNode.appendChild(script);
+
+		return () => {
+			scriptParentNode.removeChild(scriptParentNode.firstChild);
+		};
 	}, [data, theme]);
 
 	return <div id={commentNodeId} />;

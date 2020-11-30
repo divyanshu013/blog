@@ -3,12 +3,30 @@ import { Link } from 'gatsby';
 import { node, object } from 'prop-types';
 import { mediaMax } from '@divyanshu013/media';
 import { FiTerminal, FiSun, FiMoon } from 'react-icons/fi';
+import { keyframes } from '@emotion/core';
 
 import ThemeContext from './ThemeContext';
 import Button from './Button';
 import Footer from './Footer';
 import { rhythm } from '../utils/typography';
 import { BACKGROUND_TRANSITION_TIME, EASE_IN_OUT_TRANSITION, getTheme } from '../utils/theme';
+
+const terminalAnimation = keyframes({
+	from: {
+		color: 'transparent',
+	},
+	to: {
+		color: 'inherit',
+	},
+});
+
+const terminalStyles = {
+	marginRight: 8,
+	line: {
+		animation: `${terminalAnimation} 0.5s ease-in-out infinite`,
+		animationDirection: 'alternate',
+	},
+};
 
 const Layout = ({ location, children }) => {
 	const rootPath = `${__PATH_PREFIX__}/`;
@@ -34,7 +52,7 @@ const Layout = ({ location, children }) => {
 					}}
 					to="/"
 				>
-					<FiTerminal css={{ marginRight: 8 }} /> Div’s Blog
+					<FiTerminal css={terminalStyles} /> Div’s Blog
 				</Link>
 			</h2>
 		);

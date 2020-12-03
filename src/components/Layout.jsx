@@ -11,29 +11,29 @@ import Footer from './Footer';
 import { rhythm } from '../utils/typography';
 import { BACKGROUND_TRANSITION_TIME, EASE_IN_OUT_TRANSITION, getTheme } from '../utils/theme';
 
-const terminalAnimation = keyframes({
-	from: {
-		color: 'transparent',
-	},
-	to: {
-		color: 'inherit',
-	},
-});
-
-const terminalStyles = {
-	marginRight: 8,
-	line: {
-		animation: `${terminalAnimation} 0.5s ease-in-out infinite`,
-		animationDirection: 'alternate',
-	},
-};
-
 const Layout = ({ location, children }) => {
 	const rootPath = `${__PATH_PREFIX__}/`;
 	let header;
 	const { theme, toggleTheme } = useContext(ThemeContext);
 	const { color, background, secondary } = getTheme(theme);
 	const darkTheme = getTheme('dark');
+
+	const terminalAnimation = keyframes({
+		from: {
+			stroke: color,
+		},
+		to: {
+			stroke: background,
+		},
+	});
+
+	const terminalStyles = {
+		marginRight: 8,
+		line: {
+			animation: `${terminalAnimation} 0.5s ease-in-out infinite`,
+			animationDirection: 'alternate',
+		},
+	};
 
 	if (location.pathname !== rootPath) {
 		header = (

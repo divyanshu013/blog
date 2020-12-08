@@ -13,6 +13,7 @@ function Seo({ description, lang, meta, title, ogImage: ogImageProp }) {
 						description
 						author
 						siteUrl
+						domain
 					}
 				}
 				ogImageDefault: file(absolutePath: { regex: "/assets/og-image/" }) {
@@ -80,7 +81,14 @@ function Seo({ description, lang, meta, title, ogImage: ogImageProp }) {
 					content: ogImage,
 				},
 			].concat(meta)}
-		/>
+		>
+			<script
+				async
+				defer
+				data-domain={site.siteMetadata.domain}
+				src="https://plausible.io/js/plausible.js"
+			/>
+		</Helmet>
 	);
 }
 

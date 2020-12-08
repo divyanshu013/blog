@@ -4,6 +4,7 @@ module.exports = {
 		title: `Divyanshu Maithani`,
 		author: `Divyanshu Maithani`,
 		description: `Personal blog of Divyanshu Maithani`,
+		domain: 'divyanshu013.dev',
 		siteUrl: `https://divyanshu013.dev`,
 		repo: 'divyanshu013/blog',
 		social: {

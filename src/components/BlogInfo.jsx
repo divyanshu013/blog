@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { number, string } from 'prop-types';
-import { FiCoffee } from 'react-icons/fi';
 
 import { getTheme } from '../utils/theme';
 import ThemeContext from './ThemeContext';
+import Coffee from './Coffee';
 
 const BlogInfo = ({ timeToRead, date }) => {
 	const { theme } = useContext(ThemeContext);
@@ -14,7 +14,7 @@ const BlogInfo = ({ timeToRead, date }) => {
 				{date} • {timeToRead} min read
 			</small>
 			{Array.from({ length: timeToRead / 7 + 1 }).map((item, index) => (
-				<FiCoffee key={index} css={{ marginRight: 4 }} />
+				<Coffee key={index} />
 			))}
 		</div>
 	);

@@ -8,7 +8,8 @@
 		"react/no-array-index-key": 0,
 		"react/require-default-props": 0,
 		"react-hooks/rules-of-hooks": "error",
-		"react-hooks/exhaustive-deps": "warn"
+		"react-hooks/exhaustive-deps": "warn",
+		"react/jsx-props-no-spreading": 0
 	},
 	"globals": {
 		"__PATH_PREFIX__": false

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 import { COLOR_PRIMARY, CUBIC_BEZIER_TRANSITION } from '../utils/theme';
 
-const Button = styled('button')(props => ({
+const Button = styled('button')((props) => ({
 	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'center',

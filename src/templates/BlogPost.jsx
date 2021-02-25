@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 import { object } from 'prop-types';
 
 import Bio from '../components/Bio';
-import Comments from '../components/Comments';
+// import Comments from '../components/Comments';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import BlogInfo from '../components/BlogInfo';
@@ -59,7 +59,7 @@ const BlogPost = ({ data, pageContext, location }) => {
 								}}
 							/>
 							<Bio />
-							<Comments />
+							{/* <Comments /> */}
 
 							<ul
 								style={{

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/react';
 
 import ThemeContext from './ThemeContext';
 import { getTheme } from '../utils/theme';

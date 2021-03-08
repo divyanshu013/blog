@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Image from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { FiTwitter, FiGithub, FiInstagram, FiYoutube, FiMail, FiMusic } from 'react-icons/fi';
 import { FaStackOverflow, FaGoodreadsG } from 'react-icons/fa';
 import { mediaMax } from '@divyanshu013/media';
@@ -14,9 +14,7 @@ const SIDEBAR_QUERY = graphql`
 	{
 		avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
 			childImageSharp {
-				fixed(width: 128, height: 128) {
-					...GatsbyImageSharpFixed
-				}
+				gatsbyImageData(layout: FIXED, width: 128, height: 128)
 			}
 		}
 		site {
@@ -73,9 +71,9 @@ const Sidebar = () => {
 					},
 				}}
 			>
-				<Image
+				<GatsbyImage
 					alt={author}
-					fixed={avatar.childImageSharp.fixed}
+					image={avatar.childImageSharp.gatsbyImageData}
 					imgStyle={{ borderRadius: '50%' }}
 					css={{
 						marginBottom: rhythm(0.8),

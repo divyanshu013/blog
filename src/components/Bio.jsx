@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Image from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import { mediaMax } from '@divyanshu013/media';
 import { rhythm } from '../utils/typography';
@@ -12,9 +12,7 @@ const Bio = () => {
 		query BioQuery {
 			avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
 				childImageSharp {
-					fixed(width: 64, height: 64) {
-						...GatsbyImageSharpFixed
-					}
+					gatsbyImageData(layout: FIXED, width: 64, height: 64)
 				}
 			}
 			site {
@@ -52,8 +50,8 @@ const Bio = () => {
 				},
 			}}
 		>
-			<Image
-				fixed={data.avatar.childImageSharp.fixed}
+			<GatsbyImage
+				image={data.avatar.childImageSharp.gatsbyImageData}
 				alt={author}
 				css={{
 					marginTop: 8,

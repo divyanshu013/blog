@@ -18,9 +18,7 @@ function Seo({ description, lang, meta, title, ogImage: ogImageProp }) {
 				}
 				ogImageDefault: file(absolutePath: { regex: "/assets/og-image/" }) {
 					childImageSharp {
-						fixed(height: 630, width: 1200) {
-							src
-						}
+						gatsbyImageData(layout: FIXED, height: 630, width: 1200)
 					}
 				}
 			}
@@ -29,7 +27,10 @@ function Seo({ description, lang, meta, title, ogImage: ogImageProp }) {
 
 	const metaDescription = description || site.siteMetadata.description;
 	const ogImage =
-		ogImageProp || site.siteMetadata.siteUrl.concat(ogImageDefault.childImageSharp.fixed.src);
+		ogImageProp ||
+		site.siteMetadata.siteUrl.concat(
+			ogImageDefault.childImageSharp.gatsbyImageData.images.fallback.src,
+		);
 	const ogTitle = title || site.siteMetadata.title;
 
 	return (

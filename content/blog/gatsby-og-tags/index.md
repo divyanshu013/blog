@@ -22,7 +22,7 @@ Most gatsby starters already have a `Seo` component which uses [`react-helmet`](
 
 ### Tweak for Twitter cards
 
-`react-helmet` does the heavy lifting of rendering these tags in the document `head`. Here's my `Seo` component which is a tweaked version of the default `Seo` component that comes with the starter. The important bits are highlighted.
+`react-helmet` does the heavy lifting of rendering these tags in the document `head`. Here's my `Seo` component which is a tweaked version of the default `Seo` component that comes with the starter. The important bits are highlighted. Note that this post has been updated for Gatsby v3 and uses the recommended `gatsby-plugin-image` [approach](https://www.gatsbyjs.com/docs/reference/release-notes/image-migration-guide/).
 
 ```jsx
 // src/components/Seo.jsx
@@ -46,9 +46,7 @@ function Seo({ description, lang, meta, title, ogImage: ogImageProp }) {
 				// highlight-start
 				ogImageDefault: file(absolutePath: { regex: "/assets/og-image/" }) {
 					childImageSharp {
-						fixed(height: 630, width: 1200) {
-							src
-						}
+						gatsbyImageData(layout: FIXED, height: 630, width: 1200)
 					}
 				}
 				// highlight-end
@@ -64,7 +62,9 @@ function Seo({ description, lang, meta, title, ogImage: ogImageProp }) {
 	// relative links do not work
 	const ogImage =
 		ogImageProp ||
-		site.siteMetadata.siteUrl.concat(ogImageDefault.childImageSharp.fixed.src);
+		site.siteMetadata.siteUrl.concat(
+			ogImageDefault.childImageSharp.gatsbyImageData.images.fallback.src,
+		);
 
 	const ogTitle = title || site.siteMetadata.title;
 	// highlight-end
@@ -164,7 +164,8 @@ const BlogPost = ({ data, pageContext, location }) => {
 								description={post.frontmatter.description || post.excerpt}
 								// highlight-start
 								ogImage={data.site.siteMetadata.siteUrl.concat(
-									post.frontmatter.ogImage.childImageSharp.fixed.src,
+									post.frontmatter.ogImage.childImageSharp.gatsbyImageData
+										.images.fallback.src,
 								)}
 								// highlight-end
 							/>
@@ -197,9 +198,7 @@ export const pageQuery = graphql`
 				// highlight-start
 				ogImage {
 					childImageSharp {
-						fixed(height: 630, width: 1200) {
-							src
-						}
+						gatsbyImageData(layout: FIXED, height: 630, width: 1200)
 					}
 				}
 				// highlight-end

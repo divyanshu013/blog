@@ -138,7 +138,7 @@ Since I needed a single package installation, I've added the following as direct
 
 So, whenever I need to use the package I just need a single command for the installation:
 
-```sh
+```shell
 yarn add -DE eslint-config-fast-lint-prettify
 ```
 

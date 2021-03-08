@@ -27,7 +27,7 @@ const BlogPost = ({ data, pageContext, location }) => {
 								title={post.frontmatter.title}
 								description={post.frontmatter.description || post.excerpt}
 								ogImage={data.site.siteMetadata.siteUrl.concat(
-									post.frontmatter.ogImage.childImageSharp.fixed.src,
+									post.frontmatter.ogImage.childImageSharp.gatsbyImageData.images.fallback.src,
 								)}
 							/>
 							<BlogInfo date={post.frontmatter.date} timeToRead={post.timeToRead} />
@@ -123,9 +123,7 @@ export const pageQuery = graphql`
 				description
 				ogImage {
 					childImageSharp {
-						fixed(height: 630, width: 1200) {
-							src
-						}
+						gatsbyImageData(layout: FIXED, height: 630, width: 1200)
 					}
 				}
 			}

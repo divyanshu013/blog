@@ -46,7 +46,7 @@ export const useTheme = () => {
 		typeof window !== 'undefined' && window.localStorage.getItem('theme');
 	const [theme, setTheme] = useState(storedTheme || 'light');
 	const toggleTheme = () =>
-		setTheme(prevTheme => {
+		setTheme((prevTheme) => {
 			return prevTheme === 'light' ? 'dark' : 'light';
 		});
 	useEffect(() => {
@@ -63,7 +63,7 @@ Next, I created a function to get the theme tokens based on the received theme:
 ```js
 // src/utils/theme.js
 
-export const getTheme = theme =>
+export const getTheme = (theme) =>
 	theme === 'light'
 		? {
 				background: '#fff',
@@ -107,8 +107,11 @@ Here's how my context provider look which also sets the background color based o
 // src/components/ThemeProvider.jsx
 
 import React, { useEffect, useState } from 'react';
-import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
-import { Global, css } from '@emotion/core';
+import {
+	Global,
+	css,
+	ThemeProvider as EmotionThemeProvider,
+} from '@emotion/react';
 
 import ThemeContext from './ThemeContext';
 import {
@@ -405,7 +408,7 @@ The [`scale`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-functio
 
 Similarly you may theme all the components. Read the theme from the context and apply the theme tokens (color, background, etc…). If you're using a CSS-in-JS library such as [Emotion](https://emotion.sh) or [styled components](https://www.styled-components.com/), it's possible to directly read the theme.
 
-I'm using the [theme provider](https://emotion.sh/docs/emotion-theming#themeprovider-reactcomponenttype) from Emotion in my `ThemeProvider` component which passes all theme properties. Here's how my `Button` component look using the [`styled`](https://emotion.sh/docs/styled) API.
+I'm using the [theme provider](https://emotion.sh/docs/emotion-theming#themeprovider-reactcomponenttype) from Emotion in my `ThemeProvider` component which passes all theme properties. Here's how my `Button` component look using the [`styled`](https://emotion.sh/docs/styled) API. (The API has changed in latest emotion release, this is applicable for v11 currently).
 
 ```jsx
 // src/components/Button.jsx
@@ -414,7 +417,7 @@ import styled from '@emotion/styled';
 
 import { COLOR_PRIMARY, CUBIC_BEZIER_TRANSITION } from '../utils/theme';
 
-const Button = styled('button')(props => ({
+const Button = styled('button')((props) => ({
 	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'center',

@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { node, object } from 'prop-types';
 import { mediaMax } from '@divyanshu013/media';
 import { FiTerminal, FiSun, FiMoon } from 'react-icons/fi';
-import { keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/react';
 
 import ThemeContext from './ThemeContext';
 import Button from './Button';

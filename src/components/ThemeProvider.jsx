@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { node } from 'prop-types';
-import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
-import { Global, css } from '@emotion/core';
+import { Global, css, ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 
 import ThemeContext from './ThemeContext';
 import {

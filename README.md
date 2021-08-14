@@ -4,7 +4,7 @@
 
 ## About me
 
-I’m a software engineer working mostly on frontend - React, React Native, GraphQL and Node. I also create [programming videos](https://youtube.com/c/WhatTheJavaScript) with my friend. In my spare time I play music and DoTA.
+I’m a software engineer working mostly on frontend. I also create [programming videos](https://youtube.com/c/WhatTheJavaScript) with my friend. In my spare time I play music and DoTA.
 
 You may follow me on [twitter](https://twitter.com/divyanshu013) for latest updates.
 

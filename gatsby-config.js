@@ -81,7 +81,7 @@ module.exports = {
 				icon: `static/favicon.png`,
 			},
 		},
-		`gatsby-plugin-remove-serviceworker`,
+		`gatsby-plugin-offline`,
 		`gatsby-plugin-react-helmet`,
 		{
 			resolve: `gatsby-plugin-typography`,

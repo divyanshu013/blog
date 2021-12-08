@@ -1,6 +1,6 @@
 ---
 title: 'Build Simpler Components'
-description: 'Guidelines for building components with good code readability and simplicity'
+description: 'Patterns for building components with good code readability and simplicity'
 date: 2021-12-05
 categories: ['react']
 ogImage: ./og-image.png

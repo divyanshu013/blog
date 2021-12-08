@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { object } from 'prop-types';
 import { mediaMax } from '@divyanshu013/media';
+import { FiExternalLink, FiStar } from 'react-icons/fi';
 
 import ThemeProvider from '../components/ThemeProvider';
 import Sidebar from '../components/Sidebar';
@@ -35,18 +36,26 @@ const BlogIndex = ({ data, location }) => {
 					<Seo />
 					{posts.map(({ node }) => {
 						const title = node.frontmatter.title || node.fields.slug;
+						const link = node.frontmatter.external ? (
+							<a style={{ boxShadow: `none` }} href={node.frontmatter.external} target="_blank" rel="noreferrer noopener">
+								{title}
+								<FiExternalLink css={{ marginLeft: 4 }} size={16} />
+							</a>
+						) : (
+							<Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+								{title}
+							</Link>
+						)
 						return (
 							<div key={node.fields.slug}>
-								<BlogInfo timeToRead={node.timeToRead} date={node.frontmatter.date} />
+								<BlogInfo timeToRead={node.frontmatter.time || node.timeToRead} date={node.frontmatter.date} />
 								<h3
 									css={{
 										marginTop: rhythm(1 / 4),
 										marginBottom: rhythm(0.5),
 									}}
 								>
-									<Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-										{title}
-									</Link>
+									{link}
 								</h3>
 								<p
 									css={{ marginBottom: rhythm(1.5) }}
@@ -84,6 +93,8 @@ export const pageQuery = graphql`
 						date(formatString: "MMMM DD, YYYY")
 						title
 						description
+						external
+						time
 					}
 					timeToRead
 				}

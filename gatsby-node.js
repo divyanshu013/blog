@@ -20,7 +20,6 @@ exports.createPages = ({ graphql, actions }) => {
 							}
 							frontmatter {
 								title
-								external
 							}
 						}
 					}
@@ -35,22 +34,20 @@ exports.createPages = ({ graphql, actions }) => {
 		// Create blog posts pages.
 		const posts = result.data.allMarkdownRemark.edges;
 
-		posts
-			.filter((post) => !post.node.frontmatter.external)
-			.forEach((post, index) => {
-				const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-				const next = index === 0 ? null : posts[index - 1].node;
+		posts.forEach((post, index) => {
+			const previous = index === posts.length - 1 ? null : posts[index + 1].node;
+			const next = index === 0 ? null : posts[index - 1].node;
 
-				createPage({
-					path: post.node.fields.slug,
-					component: blogPost,
-					context: {
-						slug: post.node.fields.slug,
-						previous,
-						next,
-					},
-				});
+			createPage({
+				path: post.node.fields.slug,
+				component: blogPost,
+				context: {
+					slug: post.node.fields.slug,
+					previous,
+					next,
+				},
 			});
+		});
 
 		return null;
 	});

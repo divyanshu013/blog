@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { FiTwitter, FiGithub, FiInstagram, FiYoutube, FiMail, FiMusic } from 'react-icons/fi';
+import { FiTwitter, FiGithub, FiYoutube, FiMail, FiMusic } from 'react-icons/fi';
+import { SiMedium } from 'react-icons/si';
 import { FaStackOverflow, FaGoodreadsG } from 'react-icons/fa';
 import { mediaMax } from '@divyanshu013/media';
 
@@ -30,6 +31,7 @@ const SIDEBAR_QUERY = graphql`
 					instagram
 					stackoverflow
 					goodreads
+					medium
 				}
 			}
 		}
@@ -144,15 +146,15 @@ const Sidebar = () => {
 					<FiYoutube />
 				</Button>
 				<Button
-					title="Instagram"
-					aria-label="Link to my Instagram"
+					title="Medium"
+					aria-label="Link to my Medium"
 					as="a"
 					circular
-					href={social.instagram}
+					href={social.medium}
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<FiInstagram />
+					<SiMedium />
 				</Button>
 				<Button
 					title="Some music I've covered"

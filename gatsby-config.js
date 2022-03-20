@@ -17,6 +17,7 @@ module.exports = {
 			stackoverflow: 'https://stackoverflow.com/users/4952669/divyanshu-maithani',
 			newsletter: 'https://divyanshu.substack.com/',
 			goodreads: 'https://www.goodreads.com/user/show/62159316-divyanshu-maithani',
+			medium: 'https://medium.com/@divyanshu013',
 		},
 	},
 	plugins: [

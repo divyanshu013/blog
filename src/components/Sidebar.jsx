@@ -147,7 +147,7 @@ const Sidebar = () => {
 				</Button>
 				<Button
 					title="Medium"
-					aria-label="Link to my Medium"
+					aria-label="Some old blogs and featured blogs on other publications"
 					as="a"
 					circular
 					href={social.medium}

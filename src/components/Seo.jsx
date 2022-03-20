@@ -82,14 +82,7 @@ function Seo({ description, lang, meta, title, ogImage: ogImageProp }) {
 					content: ogImage,
 				},
 			].concat(meta)}
-		>
-			<script
-				async
-				defer
-				data-domain={site.siteMetadata.domain}
-				src={`https://stats.${site.siteMetadata.domain}/js/index.js`}
-			/>
-		</Helmet>
+		></Helmet>
 	);
 }
 

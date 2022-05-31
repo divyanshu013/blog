@@ -6,7 +6,7 @@ categories: ['life']
 ogImage: ./og-image.png
 ---
 
-Inspired (and challenged) by my friend [Bejoy](https://bejoy.io/10-things) I ended up spending a few hours to list down and articulate ten things I've learnt about life. This was a fun and thought provoking exercise. In no particular order:
+Inspired (and challenged) by my friend [Bejoy](https://www.bejoygm.com/posts/ten-things/) I ended up spending a few hours to list down and articulate ten things I've learnt about life. This was a fun and thought provoking exercise. In no particular order:
 
 ### 1. Learn something new everyday
 

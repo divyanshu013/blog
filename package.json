@@ -9,7 +9,7 @@
 		"url": "https://github.com/divyanshu013"
 	},
 	"dependencies": {
-		"@divyanshu013/inspirational-quotes": "^1.0.6",
+		"@divyanshu013/inspirational-quotes": "^1.0.7",
 		"@divyanshu013/media": "^1.0.0",
 		"@emotion/react": "^11.1.5",
 		"@emotion/styled": "^11.1.5",

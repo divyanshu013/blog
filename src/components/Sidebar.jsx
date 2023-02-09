@@ -78,6 +78,7 @@ const Sidebar = () => {
 					image={avatar.childImageSharp.gatsbyImageData}
 					imgStyle={{ borderRadius: '50%' }}
 					css={{
+						borderRadius: '50%',
 						marginBottom: rhythm(0.8),
 						opacity: 0.87,
 						[mediaMax.small]: {

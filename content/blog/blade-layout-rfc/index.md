@@ -2,7 +2,7 @@
 title: 'Layout components and primitives'
 description: 'RFC on building layout components and primitives in Blade, Razorpay’s open source cross platform design system. Read more on the GitHub repo 🌟'
 date: 2023-02-09
-categories: ['design systems']
+categories: ['design-systems']
 external: 'https://github.com/razorpay/blade/blob/master/rfcs/2023-01-06-layout.md'
 time: 30
 ogImage: ./og-image.png

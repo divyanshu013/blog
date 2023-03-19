@@ -1,14 +1,14 @@
 ---
 title: 'Takeaways from creation of React'
 description: 'Lessons beyond purely technical side of things from creation of one of the most popular frontend frameworks'
-date: 2023-02-18
+date: 2023-03-19
 categories: ['software-engineering']
 ogImage: ./og-image.png
 ---
 
 While watching the wonderful [react.js documentary](https://www.youtube.com/watch?v=8pDqJVdNa44), even more than purely technical marvel, I was impressed much more by things beyond code that made React possible - people, teams, leadership.
 
-## Product and Infrastructure harmony
+## Product and infrastructure harmony
 
 In larger orgs, generally there are separate product and infrastructure (or platform) teams. While product teams primarily focus on building product features, infrastructure teams primarily focus on enabling product teams to ship things better and faster by building tools, frameworks, libraries et al.
 
@@ -26,68 +26,49 @@ With Bolt, it wasn't as easy to understand other people's code _(which is what w
 
 Instead of being satisfied by things, as they are, you should strive for improving them. Change can be good.
 
-## Documentation and adoption
+## Good documentation drives adoption
 
 [Lee Byron](https://twitter.com/leeb) laid out great points on how documenting the concepts helped in clarifying them for other people which ultimately helped in growing the ideas to teams. People felt involved and a sense of ownership came.
 
-I think this has some interesting points - adoption works best when everyone has _skin in the game_. Soon, from _their_ solution it becomes _our_ solution. Documentation is probably one of the best places to start building that foundation.
+I think this has some interesting points - adoption works best when everyone has _skin in the game_. Soon, from _their_ solution it becomes _our_ solution. Documentation is probably one of the best places to start building that foundation. Good documentation is crucial for adoption and should be a high priority when building infrastructure tools.
 
-## Leadership
+## Leadership plays a crucial role
 
-Leadership - staying close to metal, understanding the core issues
+It was quite impressive to learn how well FB leadership at the time supported React as an initiative. As a leader, you should stay close to metal enough to understand the core issues faced by engineering on ground.
 
-- you should take risks when the potential rewards in play can be large
+You should be able to take risks when the potential rewards in play can be large.
 
-product infrastructure team - tom ochino says
+Ads team, at the time, had done a full rewrite of a flow in 6 months using Bolt. They identified there were some complex situations that couldn't be done in Bolt without writing spaghetti code, however they could be done in React without trading off readability. Even if 10% of such cases occurred, it would hurt the org considering the pace FB was growing at. At the time, React wasn't battle tested and lacked feature parity with Bolt. They'd already invested so much on this rewrite so it was a tough call to pause product development for another 4 months to rewrite things in React. Plus, FB stocks at the time were declining, so from business side there was more push to prioritize product development.
 
-- help other teams and key indicator of success the other team saying yeah that really helped
+Impressively, [todo](), CTO of FB at the time chimed in with full support:
 
-FB gets talked shit but:
-
-- Letting people experiment on their ideas is remarkable
-- Two frontend frameworks
-- ads team had done a recent full rewrite of a flow in 6 months
-  - identified there were some complex situations that couldn't be done in bolt without writing spaghetti code but could be done in react
-  - even if 10% such cases come up, it would hurt the org
-  - react wasn't battle tested and lacked features
-  - already invested so much on org side though in this rewrite so couldn't pause product development for 4 months. facebook stocks were declining
-  - cto - make the right technical and longterm decisions, I'll back you up, if you need to puase prod dev for 4 months you can
-    - [Tweet](https://twitter.com/schrep/status/1625917285037920256?s=20)
-  - was definitely challenging - people problems increase as you grow, code is still objective, people is where subjectivity comes in and with it comes opinions, more opinions, harder to make decisions
-
-You can't solve future problems because you don't know them. Rewrites are fine, that's how we get generational benefits. Even though bolt was tried and tested, react paved the way forward and people aligned on doing that rather than undermining things.
-
-Ideas are much more resilient than code. React might not last forever but the ideas will and help evolve next set of tools.
-
-Open source can revolutionaize your org / branding:
-
-- tom ochino - says people saying fb hired great people but had no idea what they were working on. From people saying why would you do javascript at facebook to now.
-- from very early on, working with the management chain early on and aligning them on - if this works for us we should open source it. that's a good assessment point, rather than being afraid of what if we open source this and ...
-  - lots of meetings, bit controversial but got the support that was needed
-- documentation is the king
-- leadership support man, we'll do open source the right way - instead of open sourcing things and letting them rot
-
-## Open source
-
-Open sourcing React was a key moment in the history, as we know it now. 
+> Make the right technical and longterm decisions, I'll back you up. If you need to pause product development for 4 months, you can. [Tweet](https://twitter.com/schrep/status/1625917285037920256?s=20)
 
 ## Team dynamics
 
 One thing that really stood out was how React's success was a team effort. Different people with different strengths and personalities played a part in making it successful.
 
-public
+## Engineering culture
 
-- everyone hated it initially lol [[JSConfUS 2013] Tom Occhino and Jordan Walke: JS Apps at Facebook - YouTube](https://www.youtube.com/watch?v=GW0rj4sNH2w)
-- you got to go past the initial hate
-- people thought there was no future outside fb for react
+FB's engineering culture clearly stands out.
 
-questioned the status quo - have your html, css, js separate - model, view, controller but React said, have them in components
+[Tom Occhino](), who was managing the product infrastructure team, mentions:
 
-bret victor inventing on principle still the real of a talk
+> Our role was to help other teams and the key indicator of success was the other teams saying, "Yeah, that really helped". (todo grammar period)
 
-react actually did something that revolutionazied. I'm eternally grateful. React might not last forever but it made a massive impact on my life. Power of oSS
+Letting people experiment on their ideas is remarkable - even though they had Bolt, they supported React. One of the reasons so much great OSS has come from FB engineering.
 
-rewrite is a natural progression of software, embrace it. eg. react 16 needed a rewrite to become what it is today
+You can't solve future problems because you don't know them. Rewrites are fine, that's how we get generational benefits. Even though Bolt was tried and tested, React paved the way forward and people aligned on doing that rather than undermining things.
+
+## Open source
+
+Open sourcing React was a key moment in the history, as we know it now. Open source needs commitment but it can revolutionize your org and branding.
+
+Tom Occhino mentions that people were saying FB hired great people but had no idea what they were working on. Some would even question why would someone do JS at FB. He clearly saw value in open sourcing React. From very early on, he was working with the management chain and aligning them - if this works for us, we should open source it. He laughingly mentioned - there were lots of meetings and it got a bit controversial but in the end he got the support that was needed. Leadership were onboard to open source it the _right way_.
+
+I think that's a good assessment point - if this works for us, we should consider open sourcing - rather than being afraid about what if we open source this and `<insert>` happens.
+
+Interestingly, first public impression was really bad, everyone hated it initially. People thought there was no future for React outside of FB. Over time though, people saw value and the rest is history.
 
 ## References
 

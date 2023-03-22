@@ -1,7 +1,7 @@
 ---
 title: 'Takeaways from creation of React'
 description: 'Lessons beyond purely technical side of things from creation of one of the most popular frontend frameworks'
-date: 2023-03-19
+date: 2023-03-22
 categories: ['software-engineering']
 ogImage: ./og-image.png
 ---
@@ -40,9 +40,15 @@ You should be able to take risks when the potential rewards in play can be large
 
 Ads team, at the time, had done a full rewrite of a flow in 6 months using Bolt. They identified there were some complex situations that couldn't be done in Bolt without writing spaghetti code, however they could be done in React without trading off readability. Even if 10% of such cases occurred, it would hurt the org considering the pace FB was growing at. At the time, React wasn't battle tested and lacked feature parity with Bolt. They'd already invested so much on this rewrite so it was a tough call to pause product development for another 4 months to rewrite things in React. Plus, FB stocks at the time were declining, so from business side there was more push to prioritize product development.
 
-Impressively, [todo](), CTO of FB at the time chimed in with full support:
+Impressively, [Mike Shroepfer](https://twitter.com/schrep), CTO of FB at the time chimed in with full support:
 
-> Make the right technical and longterm decisions, I'll back you up. If you need to pause product development for 4 months, you can. [Tweet](https://twitter.com/schrep/status/1625917285037920256?s=20)
+> Make the right technical choice and make the right longterm choice - and if there are short term consequences, I'll back you up. If you need months to do a rewrite, do it.
+>
+> [Source](https://twitter.com/schrep/status/1625917218809868288)
+
+> This is what technical leaders need to do. You can't just encourage people to think long term, you need to transfer the risks of long term work — or perceived risks — from them to you. Nobody makes great decisions when they’re afraid of failure or focused on the short term.
+>
+> [Source](https://twitter.com/schrep/status/1625917285037920256)
 
 ## Team dynamics
 
@@ -52,9 +58,9 @@ One thing that really stood out was how React's success was a team effort. Diffe
 
 FB's engineering culture clearly stands out.
 
-[Tom Occhino](), who was managing the product infrastructure team, mentions:
+[Tom Occhino](https://twitter.com/tomocchino), who was managing the product infrastructure team, mentions:
 
-> Our role was to help other teams and the key indicator of success was the other teams saying, "Yeah, that really helped". (todo grammar period)
+> Our role was to help other teams and the key indicator of success was the other teams saying, "Yeah, that really helped."
 
 Letting people experiment on their ideas is remarkable - even though they had Bolt, they supported React. One of the reasons so much great OSS has come from FB engineering.
 
@@ -70,7 +76,7 @@ I think that's a good assessment point - if this works for us, we should conside
 
 Interestingly, first public impression was really bad, everyone hated it initially. People thought there was no future for React outside of FB. Over time though, people saw value and the rest is history.
 
-## References
+## Recommended watching
 
 - [Reactjs documentary](https://www.youtube.com/watch?v=8pDqJVdNa44) and [QnA](https://youtu.be/WzRSysq7F4k)
 - [JS Apps at Facebook](https://www.youtube.com/watch?v=GW0rj4sNH2w)

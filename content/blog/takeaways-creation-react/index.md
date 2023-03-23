@@ -38,7 +38,7 @@ It was quite impressive to learn how well FB leadership at the time supported Re
 
 You should be able to take risks when the potential rewards in play can be large.
 
-Ads team, at the time, had done a full rewrite of a flow in 6 months using Bolt. They identified there were some complex situations that couldn't be done in Bolt without writing spaghetti code, however they could be done in React without trading off readability. Even if 10% of such cases occurred, it would hurt the org considering the pace FB was growing at. At the time, React wasn't battle tested and lacked feature parity with Bolt. They'd already invested so much on this rewrite so it was a tough call to pause product development for another 4 months to rewrite things in React. Plus, FB stocks at the time were declining, so from business side there was more push to prioritize product development.
+Ads team, at the time, had done a full rewrite of a flow in 6 months using Bolt. They identified there were some complex situations that couldn't be done in Bolt without writing spaghetti code, however it could be done in React without trading off readability. Even if 10% of such cases occurred, it would hurt the org considering the pace FB was growing at. At the time, React wasn't battle tested and lacked feature parity with Bolt. They'd already invested so much on this rewrite so it was a tough call to pause product development for another 4 months to rewrite things in React. Plus, FB stocks at the time were declining, so from business side there was more push to prioritize product development.
 
 Impressively, [Mike Shroepfer](https://twitter.com/schrep), CTO of FB at the time chimed in with full support:
 

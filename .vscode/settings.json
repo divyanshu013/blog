@@ -1,8 +1,8 @@
 {
 	"eslint.autoFixOnSave": true,
 	"editor.codeActionsOnSave": {
-		"source.fixAll.tslint": true,
-		"source.fixAll.eslint": true
+		"source.fixAll.tslint": "explicit",
+		"source.fixAll.eslint": "explicit"
 	},
 	"editor.formatOnSave": true,
 	"cSpell.enabledLanguageIds": [

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { FiTwitter, FiGithub, FiYoutube, FiMail, FiMusic } from 'react-icons/fi';
-import { SiMedium } from 'react-icons/si';
+import { SiMedium, SiSpotify, SiYoutubemusic, SiApplemusic, SiStrava } from 'react-icons/si';
 import { FaStackOverflow, FaGoodreadsG } from 'react-icons/fa';
 import { mediaMax } from '@divyanshu013/media';
 
@@ -32,6 +32,10 @@ const SIDEBAR_QUERY = graphql`
 					stackoverflow
 					goodreads
 					medium
+					spotify
+					appleMusic
+					youtubeMusic
+					strava
 				}
 			}
 		}
@@ -147,19 +151,8 @@ const Sidebar = () => {
 					<FiYoutube />
 				</Button>
 				<Button
-					title="Medium"
-					aria-label="Some old blogs and featured blogs on other publications"
-					as="a"
-					circular
-					href={social.medium}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<SiMedium />
-				</Button>
-				<Button
-					title="Some music I've covered"
-					aria-label="Link to my music"
+					title="Music from our band"
+					aria-label="Link to our music"
 					as="a"
 					circular
 					href={social.music}
@@ -167,6 +160,39 @@ const Sidebar = () => {
 					rel="noopener noreferrer"
 				>
 					<FiMusic />
+				</Button>
+				<Button
+					title="Find us on Spotify"
+					aria-label="Link to our Spotify"
+					as="a"
+					circular
+					href={social.spotify}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<SiSpotify />
+				</Button>
+				<Button
+					title="Find us on Apple Music"
+					aria-label="Link to our Apple Music"
+					as="a"
+					circular
+					href={social.appleMusic}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<SiApplemusic />
+				</Button>
+				<Button
+					title="Find us on Youtube Music"
+					aria-label="Link to our Youtube Music"
+					as="a"
+					circular
+					href={social.youtubeMusic}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<SiYoutubemusic />
 				</Button>
 				<Button
 					title="What I'm reading these days"
@@ -178,6 +204,28 @@ const Sidebar = () => {
 					rel="noopener noreferrer"
 				>
 					<FaGoodreadsG />
+				</Button>
+				<Button
+					title="Medium"
+					aria-label="Some old blogs and featured blogs on other publications"
+					as="a"
+					circular
+					href={social.medium}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<SiMedium />
+				</Button>
+				<Button
+					title="Strava"
+					aria-label="Link to my Strava"
+					as="a"
+					circular
+					href={social.strava}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<SiStrava />
 				</Button>
 				<Button
 					title="Good old email"

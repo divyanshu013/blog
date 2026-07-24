@@ -154,12 +154,16 @@ module.exports = {
 				color: `salmon`,
 			},
 		},
-		{
-			resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
-			options: {
-				devMode: false,
-			},
-		},
+		...(process.env.NETLIFY || process.env.CI
+			? []
+			: [
+					{
+						resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+						options: {
+							devMode: false,
+						},
+					},
+				]),
 		'gatsby-plugin-catch-links',
 	],
 };

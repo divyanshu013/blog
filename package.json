@@ -69,7 +69,7 @@
 		"prettier": "^3.9.6"
 	},
 	"engines": {
-		"node": ">=18.0.0 <26"
+		"node": ">=22.12.0 <26"
 	},
 	"keywords": [
 		"divyanshu",

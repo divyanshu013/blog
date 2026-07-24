@@ -25,6 +25,7 @@ module.exports = {
 			strava: 'https://www.strava.com/athletes/90957134',
 		},
 	},
+	trailingSlash: 'always',
 	plugins: [
 		`gatsby-plugin-emotion`,
 		{
@@ -74,7 +75,59 @@ module.exports = {
 		`gatsby-plugin-image`,
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
-		`gatsby-plugin-feed`,
+		{
+			resolve: `gatsby-plugin-feed`,
+			options: {
+				query: `
+					{
+						site {
+							siteMetadata {
+								title
+								description
+								siteUrl
+								site_url: siteUrl
+							}
+						}
+					}
+				`,
+				feeds: [
+					{
+						serialize: ({ query: { site, allMarkdownRemark } }) =>
+							allMarkdownRemark.nodes.map((node) => ({
+								...node.frontmatter,
+								description: node.frontmatter.description || node.excerpt,
+								date: node.frontmatter.date,
+								url: site.siteMetadata.siteUrl + node.fields.slug,
+								guid: site.siteMetadata.siteUrl + node.fields.slug,
+								custom_elements: [{ 'content:encoded': node.html }],
+							})),
+						query: `
+							{
+								allMarkdownRemark(
+									filter: { frontmatter: { title: { ne: "About" } } }
+									sort: { frontmatter: { date: DESC } }
+								) {
+									nodes {
+										excerpt
+										html
+										fields {
+											slug
+										}
+										frontmatter {
+											title
+											date
+											description
+										}
+									}
+								}
+							}
+						`,
+						output: '/rss.xml',
+						title: "Divyanshu Maithani's Blog RSS Feed",
+					},
+				],
+			},
+		},
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {

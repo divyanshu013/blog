@@ -69,8 +69,9 @@ const Bio = () => {
 			<div css={{ fontSize: 16, color: secondary }}>
 				<p>
 					Personal blog of <a href={social.twitter}>{author}</a>. I’m a{' '}
-					<a href={social.github}>software engineer</a> working mostly on frontend. I also create <a href={social.youtube}>programming videos</a>{' '}
-					with my friend. In my spare time I play music and DoTA.
+					<a href={social.github}>software engineer</a> working mostly on frontend. I also create{' '}
+					<a href={social.youtube}>programming videos</a> with my friend. In my spare time I play
+					music and DoTA.
 				</p>
 				<p>
 					You may follow me on <a href={social.twitter}>twitter</a> or join my{' '}

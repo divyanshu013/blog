@@ -4,26 +4,24 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 function Seo({ description, lang, meta, title, ogImage: ogImageProp }) {
-	const { site, ogImageDefault } = useStaticQuery(
-		graphql`
-			query {
-				site {
-					siteMetadata {
-						title
-						description
-						author
-						siteUrl
-						domain
-					}
-				}
-				ogImageDefault: file(absolutePath: { regex: "/assets/og-image/" }) {
-					childImageSharp {
-						gatsbyImageData(layout: FIXED, height: 630, width: 1200)
-					}
+	const { site, ogImageDefault } = useStaticQuery(graphql`
+		query {
+			site {
+				siteMetadata {
+					title
+					description
+					author
+					siteUrl
+					domain
 				}
 			}
-		`,
-	);
+			ogImageDefault: file(absolutePath: { regex: "/assets/og-image/" }) {
+				childImageSharp {
+					gatsbyImageData(layout: FIXED, height: 630, width: 1200)
+				}
+			}
+		}
+	`);
 
 	const metaDescription = description || site.siteMetadata.description;
 	const ogImage =
@@ -82,7 +80,7 @@ function Seo({ description, lang, meta, title, ogImage: ogImageProp }) {
 					content: ogImage,
 				},
 			].concat(meta)}
-		></Helmet>
+		/>
 	);
 }
 

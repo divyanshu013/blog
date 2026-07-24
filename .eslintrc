@@ -1,20 +1,43 @@
 {
-	"extends": ["airbnb", "prettier", "prettier/react"],
+	"extends": ["airbnb", "prettier"],
 	"plugins": ["prettier", "react-hooks"],
-	"parser": "babel-eslint",
+	"parser": "@babel/eslint-parser",
+	"parserOptions": {
+		"requireConfigFile": false,
+		"babelOptions": {
+			"presets": ["babel-preset-gatsby"]
+		}
+	},
 	"rules": {
 		"prettier/prettier": "error",
 		"react/forbid-prop-types": 0,
 		"react/no-array-index-key": 0,
 		"react/require-default-props": 0,
+		"react/function-component-definition": 0,
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"react/jsx-no-constructed-context-values": 0,
+		"react/no-danger": 0,
+		"react/no-unknown-property": ["error", { "ignore": ["css"] }],
 		"react-hooks/rules-of-hooks": "error",
 		"react-hooks/exhaustive-deps": "warn",
-		"react/jsx-props-no-spreading": 0
+		"react/jsx-props-no-spreading": 0,
+		"import/prefer-default-export": 0,
+		"import/no-extraneous-dependencies": [
+			"error",
+			{
+				"devDependencies": [
+					"**/*.test.{js,jsx}",
+					"**/jest-setup.js",
+					"**/jest.config.js"
+				]
+			}
+		]
 	},
 	"globals": {
 		"__PATH_PREFIX__": false
 	},
 	"env": {
-		"browser": true
+		"browser": true,
+		"jest": true
 	}
 }

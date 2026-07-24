@@ -5,28 +5,26 @@ exports.createPages = ({ graphql, actions }) => {
 	const { createPage } = actions;
 
 	const blogPost = path.resolve(`./src/templates/BlogPost.jsx`);
-	return graphql(
-		`
-			{
-				allMarkdownRemark(
-					filter: { frontmatter: { title: { ne: "About" } } }
-					sort: { fields: [frontmatter___date], order: DESC }
-					limit: 1000
-				) {
-					edges {
-						node {
-							fields {
-								slug
-							}
-							frontmatter {
-								title
-							}
+	return graphql(`
+		{
+			allMarkdownRemark(
+				filter: { frontmatter: { title: { ne: "About" } } }
+				sort: { frontmatter: { date: DESC } }
+				limit: 1000
+			) {
+				edges {
+					node {
+						fields {
+							slug
+						}
+						frontmatter {
+							title
 						}
 					}
 				}
 			}
-		`,
-	).then((result) => {
+		}
+	`).then((result) => {
 		if (result.errors) {
 			throw result.errors;
 		}
